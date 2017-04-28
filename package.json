@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "query-overpass": "^1.4.0"
+    "query-overpass": "^1.4.0",
+    "request": "^2.81.0"
   }
 }

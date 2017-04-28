@@ -1,22 +1,27 @@
 var fs = require("fs");
+var request = require('request');
+
 var queryOverpass = require('query-overpass');
 
 var contents = fs.readFileSync("overpassTurbo.json");
 
 var jsonContent = JSON.parse(contents);
 
+console.log(jsonContent.features[0]);
+
 var relation=[];
 
-for(var k in jsonContent.elements) {
+for(var k in jsonContent.features) {
 
-  if (jsonContent.elements[k].type=="relation"){
+  if (jsonContent.features[k].properties.type=="relation"){
     //console.log(jsonContent.elements[k].id);
 
-     relation.push(jsonContent.elements[k]);
+     relation.push(jsonContent.features[k].properties);
   }
 
 }
 
+console.log(relation[0]);
 
 createOsmJson(relation).then( (arrayItem) => {
 
@@ -34,13 +39,13 @@ queryOverpass('[out:json][timeout:25];area(3606847723)->.searchArea;(relation["b
 function addItem(item){
   return new Promise((resolve,reject) => {
 
-    request('http://polygons.openstreetmap.fr/get_wkt.py?id='+id+'&params=0', function (error, response, body) {
+    request('http://polygons.openstreetmap.fr/get_wkt.py?id='+item.id+'&params=0', function (error, response, body) {
       
     
       if(error){
         return reject(error);
       }
-
+      
       var poly=body.split(";")[1];
 
       item.wkt=poly;
@@ -55,7 +60,7 @@ function addItem(item){
 }
 
 function writeRdf(geojson){
-  fs.writeFile('./overpassTurnbo.json', geojson, function (err) {
+  fs.writeFile('./overpass.json', geojson, function (err) {
     if (err)
       return console.log(err);
 
