@@ -9,31 +9,34 @@ var jsonContent = JSON.parse(contents);
 
 console.log(jsonContent.features[0]);
 
-var relation=[];
+relationExtractor(jsonContent);
 
-for(var k in jsonContent.features) {
+function relationExtractor(jsonContent){
+  let relation=[];
+  for(let k in jsonContent.features) {
 
-  if (jsonContent.features[k].properties.type=="relation"){
-    //console.log(jsonContent.elements[k].id);
+    if (jsonContent.features[k].properties.type=="relation"){
+      //console.log(jsonContent.elements[k].id);
 
-     relation.push(jsonContent.features[k].properties);
+       relation.push(jsonContent.features[k].properties);
+    }
+
   }
 
+  console.log(relation[0]);
+
+  createOsmJson(relation).then( (arrayItem) => {
+
+      writeRdf(JSON.stringify(arrayItem));
+
+  });
 }
-
-console.log(relation[0]);
-
-createOsmJson(relation).then( (arrayItem) => {
-
-    writeRdf(JSON.stringify(arrayItem));
-
-});
 
 /**
 queryOverpass('[out:json][timeout:25];area(3606847723)->.searchArea;(relation["boundary"="administrative"](area.searchArea););out;>;out skel qt;', function(error, geojson){
     console.log(error);
     console.log(geojson);
-    writeRdf(JSON.stringify(geojson));
+    relationExtractor(geojson);
 });**/
 
 function addItem(item){
