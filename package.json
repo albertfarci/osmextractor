@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "query-overpass": "^1.4.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "virtuoso-sparql-client": "0.0.4"
   }
 }
