@@ -35,15 +35,23 @@ function queryBDpedia (jsonOverpass){
 
 
 function addItem(item, i){
-  
-    return Client.query(`
-      prefix wikidata: <http://www.wikidata.org/entity/>
-    	SELECT ?a  wikidata:${item.tags.wikidata} as ?data
-    	WHERE {
-
-    		?a owl:sameAs wikidata:${item.tags.wikidata}.
-    	}`);
-
+  console.log(i);
+  return new Promise((resolve, reject) => {
+    setTimeout(function() {
+      console.log(i);
+      Client.query(`
+        PREFIX wikidata: <http://www.wikidata.org/entity/>
+        SELECT ?dbpediaId  wikidata:${item.tags.wikidata} as ?data
+        WHERE {
+        	?dbpediaId owl:sameAs wikidata:${item.tags.wikidata}.
+        }
+      `)
+      .then((results)=>{
+        resolve(results.results.bindings[0]);
+      })
+      .catch(reject);
+    }, 1500*i);
+  });
 }
 
 
