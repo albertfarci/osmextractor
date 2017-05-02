@@ -1,9 +1,9 @@
 var fs = require("fs");
 var request = require('request');
- 
+
 var osmDbpedia = fs.readFileSync("../OsmDBpedia/osmDbpedia.json");
 var jsonOsmDbpedia = JSON.parse(osmDbpedia);
- 
+
 createWikidataJson(jsonOsmDbpedia).then((arrayWikiData) => {
 
 	writeRdf(JSON.stringify(arrayWikiData));
@@ -13,7 +13,7 @@ createWikidataJson(jsonOsmDbpedia).then((arrayWikiData) => {
 
 
 function writeRdf(geojson){
-  fs.writeFile('./OsmDBpediaWikidata.jsonld', geojson, function (err) {
+  fs.writeFile('./OsmDBpediaWikidata.json', geojson, function (err) {
     if (err)
       return console.log(err);
 
@@ -24,12 +24,12 @@ function writeRdf(geojson){
 function addItem(item, i){
 	return new Promise((resolve,reject) => {
 		let query=encodeURIComponent(`
-			PREFIX wikibase: <http://wikiba.se/ontology#> 
-			PREFIX wd: <http://www.wikidata.org/entity/> 
-			SELECT * 
-			WHERE{ 
-					BIND(wd:${item.tags.wikidata} AS ?wikidata)?sitelink schema:about ?wikidata. 
-				FILTER REGEX(STR(?sitelink), ".wikipedia.org/wiki/") . 
+			PREFIX wikibase: <http://wikiba.se/ontology#>
+			PREFIX wd: <http://www.wikidata.org/entity/>
+			SELECT *
+			WHERE{
+					BIND(wd:${item.tags.wikidata} AS ?wikidata)?sitelink schema:about ?wikidata.
+				FILTER REGEX(STR(?sitelink), ".wikipedia.org/wiki/") .
 			}`);
 
 		console.log(query);
@@ -42,14 +42,14 @@ function addItem(item, i){
 		};
 		setTimeout(function() {
 		request(options, function (error, response, body) {
-	      
+
 			if(error){
 		        return reject(error);
 		      }
 
 		      let wikiObject={};
 
-		      
+
 		      body=JSON.parse(body);
 		      console.log(body);
 
@@ -63,9 +63,9 @@ function addItem(item, i){
 
 		     item.wikipediaLinks=wikiObject;
 
-	      	
+
 		     return resolve(item);
-		    
+
 
 	    });
 	    }, 1000*i);
