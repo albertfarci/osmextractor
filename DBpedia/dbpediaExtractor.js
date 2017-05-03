@@ -13,7 +13,7 @@ Client.setOptions("application/json");
 queryBDpedia(jsonOsmDbpedia).then((results)=>{
 
     let dbpediaJson="";
-
+    writeRdf(JSON.stringify(results));
     console.log(results);
 
 })
