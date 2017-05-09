@@ -41,17 +41,14 @@ function merge(){
 
 		for (var itemDBpedia of jsonDbpedia){
 
-			if(itemDBpedia){
+			if(itemDBpedia["http://www.w3.org/2002/07/owl#sameAs"]){
+				if(itemOverpass.tags.wikidata == itemDBpedia["http://www.w3.org/2002/07/owl#sameAs"]["@id"].split("http://www.wikidata.org/entity/")[1]){
 
-				if(itemOverpass.tags.wikidata == itemDBpedia["data"]["value"].split("http://www.wikidata.org/entity/")[1]){
-
-					itemOverpass.dbpedia=itemDBpedia["dbpediaId"]["value"];
-
+					//itemOverpass.dbpedia=itemDBpedia["dbpediaId"]["value"];
+					itemOverpass.dbpedia=itemDBpedia["@id"];
 					console.log(itemDBpedia["dbpediaId"]);
 
 				}
-
-
 
 			}
 
