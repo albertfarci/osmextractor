@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "fs": "0.0.1-security",
     "hashcode": "^1.0.3",
     "query-overpass": "^1.4.0",
     "request": "^2.81.0",

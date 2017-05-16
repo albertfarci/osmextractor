@@ -1,85 +1,51 @@
 var fs = require("fs");
 var request = require('request');
 
-var queryOverpass = require('query-overpass');
+/**
+Estrae dal json le features che appartengono al tipo relation,
+  inserendo gli oggetti trovati in un array di supporto.
+Return:
+  -Array di oggetti JSON
+**/
+exports.relationExtractor = (jsonContent)=>{
 
-var contents = fs.readFileSync("overpassTurbo.json");
+    let relationArray=[];
+    for(let k in jsonContent.features) {
 
-var jsonContent = JSON.parse(contents);
+      if (jsonContent.features[k].properties.type=="relation"){
 
-console.log(jsonContent.features[0]);
-
-relationExtractor(jsonContent);
-
-function relationExtractor(jsonContent){
-  let relation=[];
-  for(let k in jsonContent.features) {
-
-    if (jsonContent.features[k].properties.type=="relation"){
-      //console.log(jsonContent.elements[k].id);
-
-       relation.push(jsonContent.features[k].properties);
+         relationArray.push(jsonContent.features[k].properties);
+      }
     }
 
-  }
-
-  console.log(relation[0]);
-
-  createOsmJson(relation).then( (arrayItem) => {
-
-      writeRdf(JSON.stringify(arrayItem));
-
-  });
-}
+    return relationArray;
+};
 
 /**
-queryOverpass('[out:json][timeout:25];area(3606847723)->.searchArea;(relation["boundary"="administrative"](area.searchArea););out;>;out skel qt;', function(error, geojson){
-    console.log(error);
-    console.log(geojson);
-    relationExtractor(geojson);
-});**/
-
-function addItem(item){
+Utilizza il modulo npm request.
+Parametri:
+  -Item= oggetto JSON
+Effettua la chiamata al servizio http://polygons.openstreetmap.fr/get_wkt.py,
+  passando come paramentri l'id della relazione e specificando che la risposta
+  deve essere in formato wkt.
+Infine la geometry ottenuta dal servizio verrà inserita
+  come coppia chiave valore all'interno dell'oggetto passato come parametro.
+Return:
+  - Promise
+**/
+//http://ustroetz.github.io/gimmeOSM/?relationID=40007
+exports.relationResolve=(item)=>{
   return new Promise((resolve,reject) => {
-
     request('http://polygons.openstreetmap.fr/get_wkt.py?id='+item.id+'&params=0', function (error, response, body) {
-      
-    
+
       if(error){
         return reject(error);
       }
-      
+
       var poly=body.split(";")[1].split("\n")[0];
-
       item.wkt=poly;
-
       return resolve(item);
 
     });
-
   });
-  
-
-}
-
-function writeRdf(geojson){
-  fs.writeFile('./overpass.json', geojson, function (err) {
-    if (err)
-      return console.log(err);
-
-  });
-}
-
-function createOsmJson(geoJson){
-
-    let promises=[];
-
-    for(var item of geoJson){
-
-        promises.push(addItem(item));
-
-    }
-
-    return Promise.all(promises);
-
-}
+};
