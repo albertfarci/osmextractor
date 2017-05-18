@@ -41,9 +41,11 @@ exports.relationResolve=(item)=>{
       if(error){
         return reject(error);
       }
-
-      var poly=body.split(";")[1].split("\n")[0];
-      item.wkt=poly;
+      if(body.includes(";")){
+        var poly=body.split(";")[1].split("\n")[0];
+        item.wkt=poly;
+        return resolve(item);
+      }
       return resolve(item);
 
     });

@@ -1,0 +1,1361 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/toti/geo/"
+     xml:base="https://w3id.org/toti/geo/"
+     xmlns:tz-world="http://www.w3.org/2006/timezone-world#"
+     xmlns:schema="http://schema.org/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wd="http://www.wikidata.org/entity/"
+     xmlns:geo="http://intuit.crs4.it/vocabulary/geo/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dbr-it="http://it.dbpedia.org/resource/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dbpedia="http://dbpedia.org/resource/"
+     xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:tzont="http://www.w3.org/2006/timezone#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wd-prop="http://www.wikidata.org/prop/"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/toti/geo/">
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dc:contributor rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Intuit Team</dc:contributor>
+        <rdfs:label xml:lang="en"></rdfs:label>
+        <dc:title xml:lang="en"></dc:title>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <dc:format rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">OWL 2 DL</dc:format>
+        <dc:publisher rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">CRS4</dc:publisher>
+        <dc:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">CRS4</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPartOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasPartOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    
+
+
+    <!-- https://w3id.org/toti/geo/isDescribedBy -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/toti/geo/isDescribedBy">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://w3id.org/toti/geo/notes -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/toti/geo/notes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart">
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#hasPart-003"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="it">Ha parte</rdfs:label>
+        <rdfs:label xml:lang="en">Has Part</rdfs:label>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-003"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
+        <rdfs:label xml:lang="it">È parte di</rdfs:label>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- https://w3id.org/toti/geo/country -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/toti/geo/country">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/toti/geo/location"/>
+        <rdfs:range rdf:resource="https://w3id.org/toti/geo/Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toti/geo/hasAdministrativeParent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/toti/geo/hasAdministrativeParent">
+        <owl:inverseOf rdf:resource="https://w3id.org/toti/geo/isAdministrativeParentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/toti/geo/isAdministrativeParentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/toti/geo/isAdministrativeParentOf"/>
+    
+
+
+    <!-- https://w3id.org/toti/geo/location -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/toti/geo/location"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/toti/geo/administrativeLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/toti/geo/administrativeLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/toti/geo/test -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/toti/geo/test"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Archipelago -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Archipelago">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Archipelago"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Atoll -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Atoll">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Atoll"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Bay -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Bay">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Bay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Beach -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Beach">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Beach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/BodyOfWater -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/BodyOfWater">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Canal -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Canal">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Canal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Cape -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Cape">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Cape"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Cave -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Cave">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Cave"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Country -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Country">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Crater -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Crater">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Crater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Creek -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Creek">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Creek"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Desert -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Desert">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Desert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Forest -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Forest">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Forest"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Glacier -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Glacier">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Glacier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/HistoricalCountry -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/HistoricalCountry">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/HistoricalCountry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/HotSpring -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/HotSpring">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/HotSpring"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Island -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Island">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Island"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Lake -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Lake">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Lake"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Mountain -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Mountain">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Mountain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/MountainRange -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/MountainRange">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/MountainRange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/NaturalPlace -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/NaturalPlace">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Ocean -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Ocean">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Ocean"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/River -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/River">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/River"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Sea -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Sea">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Sea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Stream -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Stream">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Valley -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Valley">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Valley"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Volcano -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Volcano">
+        <owl:equivalentClass rdf:resource="https://w3id.org/toti/geo/Volcano"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/AdministrativeArea -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/AdministrativeArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Zone"/>
+        <rdfs:seeAlso>http://dbpedia.org/resource/Administrative_division</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/AdministrativeDivisionOfChina -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/AdministrativeDivisionOfChina">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Archipelago -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Archipelago">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Area -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Area">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Atoll -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Atoll">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Island"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Bay -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Bay">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Beach -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Beach">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/BiodiversityHotspot -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/BiodiversityHotspot">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Area"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/BodyOfWater -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/BodyOfWater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/BritishOverseasTerritory -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/BritishOverseasTerritory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/British_Overseas_Territories"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Canal -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Canal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Canyon -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Canyon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Canyon"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Cape -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Cape">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/CaribbeanNetherlands -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/CaribbeanNetherlands">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Cave -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Cave">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/CittaMetropolitana -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/CittaMetropolitana">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+        <rdfs:label xml:lang="it">Città metropolitana</rdfs:label>
+        <rdfs:label xml:lang="en">Metropolitan City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/City -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/City">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Settlement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/ColdDesert -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/ColdDesert">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Desert"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Comune -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Comune">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+        <terms:description xml:lang="it">Comune: ente amministrativo determinato da precisi limiti territoriali sui quali insiste una porzione di popolazione</terms:description>
+        <rdfs:label xml:lang="it">Comune</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Continent -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Continent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/GeographicalGrouping"/>
+        <rdfs:isDefinedBy rdf:resource="dbpedia:Continent"/>
+        <rdfs:label xml:lang="en">Continent</rdfs:label>
+        <rdfs:label xml:lang="fr">Continent</rdfs:label>
+        <rdfs:label xml:lang="es">Continente</rdfs:label>
+        <rdfs:label xml:lang="it">Continente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Country -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Country">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/toti/geo/administrativeLevel"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+        <terms:description xml:lang="it">Stato: Entita politica che governa ed esercita il potere sovrano su un determinato territorio e sui soggetti ad esso appartenenti</terms:description>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:label xml:lang="es">Pais</rdfs:label>
+        <rdfs:label xml:lang="fr">Pay</rdfs:label>
+        <rdfs:label xml:lang="it">Stato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/CountryGrouping -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/CountryGrouping">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Zone"/>
+        <rdfs:label xml:lang="es">Agrupacion de paises</rdfs:label>
+        <rdfs:label xml:lang="en">Country grouping</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupement de pays</rdfs:label>
+        <rdfs:label xml:lang="it">Raggruppamento di paesi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/CountryWithinTheKingdomOfDenmark -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/CountryWithinTheKingdomOfDenmark">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+        <isDescribedBy>http://dbpedia.org/page/Danish_Realm</isDescribedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Crater -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Crater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Creek -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Creek">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/CulturalRegion -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/CulturalRegion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Area"/>
+        <rdfs:isDefinedBy rdf:resource="dbpedia:Cultural_area"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/DependentTerritoryUSA -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/DependentTerritoryUSA">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+        <isDescribedBy>http://dbpedia.org/page/Territories_of_the_United_States</isDescribedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/DependetTerritoryNorway -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/DependetTerritoryNorway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+        <isDescribedBy>http://dbpedia.org/page/Dependencies_of_Norway</isDescribedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Desert -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Desert">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/DesertPavement -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/DesertPavement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/HotDesert"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Desert_pavement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/DuneSea -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/DuneSea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/HotDesert"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Erg_(landform)"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/EconomicGrouping -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/EconomicGrouping">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/CountryGrouping"/>
+        <rdfs:label xml:lang="es">Agrupacion economica</rdfs:label>
+        <rdfs:label xml:lang="en">Economic grouping</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupement economique</rdfs:label>
+        <rdfs:label xml:lang="it">Raggruppamento economico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/EthnicAndReligiousGrouping -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/EthnicAndReligiousGrouping">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/CountryGrouping"/>
+        <rdfs:label xml:lang="es">Agrupacion etnico religiosa</rdfs:label>
+        <rdfs:label xml:lang="en">Ethnic and religious grouping</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupement ethnique et religieux</rdfs:label>
+        <rdfs:label xml:lang="it">Raggruppamento etnico e religioso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Fjord -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Fjord">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Fjord"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Forest -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Forest">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/FreeAssociationNewZealand -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/FreeAssociationNewZealand">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+        <isDescribedBy>http://dbpedia.org/page/Realm_of_New_Zealand</isDescribedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/GeographicalGrouping -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/GeographicalGrouping">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/CountryGrouping"/>
+        <rdfs:label xml:lang="es">Agrupacion geografica</rdfs:label>
+        <rdfs:label xml:lang="en">Geographical groupings</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupement geographique</rdfs:label>
+        <rdfs:label xml:lang="it">Raggruppamento geografico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/GeographicalPart -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/GeographicalPart">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Area"/>
+        <rdfs:comment xml:lang="it">Ripartizione geografica: Nord-Ovest, Nord-Est, Centro, Sud, Isole</rdfs:comment>
+        <rdfs:label xml:lang="it">Ripartizione Geografica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Geyser -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Geyser">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Geyser"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Glacier -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Glacier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Gorge -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Gorge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Canyon"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Grove -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Grove">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Woodland"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/Grove_(nature)"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Hamada -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Hamada">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/HotDesert"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Hamlet -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Hamlet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Settlement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Hill -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Hill">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Hill"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/HistoricPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/HistoricPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/HistoricalCountry -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/HistoricalCountry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Country"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/HistoricPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/HotDesert -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/HotDesert">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Desert"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/HotSpring -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/HotSpring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/IncorporatedUnorganizedTerritory -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/IncorporatedUnorganizedTerritory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/DependentTerritoryUSA"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Island -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Island">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Island"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Jungle -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Jungle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Forest"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Jungle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Lagoon -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Lagoon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Lagoon"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Lake -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Lake">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/MilitaryArea -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/MilitaryArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Area"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Mountain -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Mountain">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/MountainRange -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/MountainRange">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/NationalPark -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/NationalPark">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Park"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/NaturalPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/NaturalPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/NonSelfGoverningTerritories -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/NonSelfGoverningTerritories">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/toti/geo/State"/>
+        <rdfs:label xml:lang="en">Non-self governing territories</rdfs:label>
+        <rdfs:label xml:lang="fr">Territoire non autonome</rdfs:label>
+        <rdfs:label xml:lang="it">Territori non autonomi</rdfs:label>
+        <rdfs:label xml:lang="es">Territorio no autonomo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Oasis -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Oasis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Oasis"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Ocean -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Ocean">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/OverseasCollectivity -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/OverseasCollectivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/OverseasFrance"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/OverseasDepartment -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/OverseasDepartment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/OverseasFrance"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Overseas_department"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/OverseasFrance -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/OverseasFrance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NonSelfGoverningTerritories"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/OverseasTerritory -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/OverseasTerritory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/OverseasFrance"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Park -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Park">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/PolarDesert -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/PolarDesert">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Desert"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Polar_desert"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/PoliticalGrouping -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/PoliticalGrouping">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/CountryGrouping"/>
+        <rdfs:label xml:lang="es">Agrupacion politica</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupement politique</rdfs:label>
+        <rdfs:label xml:lang="en">Political grouping</rdfs:label>
+        <rdfs:label xml:lang="it">Raggruppamento politico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Pond -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Pond">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Pond"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/ProtectedArea -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/ProtectedArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Park"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Provincia -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Provincia">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+        <terms:description xml:lang="it">Provincia: ente locale avente una competenza su un gruppo di comuni, non necessariamente contigui</terms:description>
+        <rdfs:label xml:lang="it">Provincia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Regione -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Regione">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+        <terms:description xml:lang="it">Regione: ente territoriale presente nell&apos;ordinamento giuridico Italiano</terms:description>
+        <rdfs:label xml:lang="it">Regione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/River -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/River">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/RiverDelta -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/RiverDelta">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/River_delta"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Sea -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Sea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Settlement -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Settlement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Slum -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Slum">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Settlement"/>
+        <notes>Numerous other terms are often used interchangeably with slum: shanty town, favela, rookery, gecekondu, skid row, barrio, ghetto, bidonville, taudis, bandas de miseria, barrio marginal, morro, loteamento, barraca, musseque, tugurio, solares, mudun safi, karyan, medina achouaia, brarek, ishash, galoos, tanake, baladi, hrushebi, chalis, katras, zopadpattis, bustee, estero, looban, dagatan, umjondolo, watta, udukku, and chereka bete.</notes>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/SovereignState -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/SovereignState">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Country"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/State -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/State">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/AdministrativeArea"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/StateWithLimitedRecognition -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/StateWithLimitedRecognition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Country"/>
+        <isDescribedBy>http://dbpedia.org/page/List_of_states_with_limited_recognition</isDescribedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Stream -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Stream">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Town -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Town">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Settlement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/UnincorporatedOrganizedTerritory -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/UnincorporatedOrganizedTerritory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/DependentTerritoryUSA"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/UnincorporatedUnorganizedTerritory -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/UnincorporatedUnorganizedTerritory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/DependentTerritoryUSA"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/UrbanPark -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/UrbanPark">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Park"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Valley -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Valley">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Village -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Village">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Settlement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Volcano -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Volcano">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Waterfall -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Waterfall">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/BodyOfWater"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/Waterfall"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/WineRegion -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/WineRegion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/Area"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Woodland -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Woodland">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/toti/geo/NaturalPlace"/>
+        <isDescribedBy rdf:resource="http://dbpedia.org/resource/"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/toti/geo/Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/toti/geo/Zone">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#changeNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:comment xml:lang="en">A note about a modification to a concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">change note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote">
+        <rdfs:label xml:lang="en">editorial note</rdfs:label>
+        <rdfs:comment xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#historyNote">
+        <rdfs:comment xml:lang="en">A note about the past state/use/meaning of a concept.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">history note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:comment xml:lang="en">A notation, also known as classification code, is a string of characters such as &quot;T58.5&quot; or &quot;303.4833&quot; used to uniquely identify a concept within the scope of a given concept scheme.</rdfs:comment>
+        <rdfs:label xml:lang="en">notation</rdfs:label>
+        <rdfs:comment xml:lang="en">By convention, skos:notation is used with a typed literal in the object position of the triple.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/AdministrativeArea"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/Area"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/CountryGrouping"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/HistoricPlace"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/Park"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/Settlement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/City"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/Hamlet"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/Slum"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/Town"/>
+            <rdf:Description rdf:about="https://w3id.org/toti/geo/Village"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
