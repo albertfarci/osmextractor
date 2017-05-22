@@ -8,7 +8,7 @@ const REGIONE = 4;
 
 exports.createIndividual = (file)=> {
       let promises=[];
-      var osmDbpediaWikidata = fs.readFileSync(`./boundary.json`);
+      var osmDbpediaWikidata = fs.readFileSync(`./${file}.json`);
       var jsonOsmDbpediaWikidata = JSON.parse(osmDbpediaWikidata);
 
           for (var item of jsonOsmDbpediaWikidata){
@@ -18,6 +18,7 @@ exports.createIndividual = (file)=> {
           Promise.all(promises)
           .then(results=>{
               let i=0;
+              let individuals="";
               for(let item of results){
 
                   let identifier=encode().value( item.type + "/" +  item.id);
@@ -25,8 +26,12 @@ exports.createIndividual = (file)=> {
 
                     individuals=individuals+`<administrativeLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">${item.tags.admin_level}</administrativeLevel>`;
                     individuals=individuals+`
-                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/${item.id}"/>
+                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/${item.id}"/>`;
+
+                    if(item.tags.wikidata){
+                      individuals=individuals+`
                             <owl:sameAs rdf:resource="http://www.wikidata.org/entity/${item.tags.wikidata}"/>`;
+                    }
 
                     if(item.dbpedia){
                       individuals=individuals+`
@@ -93,33 +98,22 @@ exports.createIndividual = (file)=> {
 
 exports.jsonToIndividuals=(item)=>{
   return new Promise((resolve, reject) => {
-      let urlName, admLevel;
-
+      let urlName="", admLevel;
       let identifier=encode().value( item.type + "/" +  item.id);
-      if (item.tags.admin_level == COMUNE){
-        if(item.tags["name"]==="Sant'Andrea Frius" || item.tags["name"]==="Siliqua" || item.tags["name"]==="Margaxori/Morgongiori" || item.tags["name"]==="Agghju/Aggius" || item.tags["name"]==="Thiesi" ){
-          urlName=item.tags["name"];
-        }else{
-          urlName=item.tags["name:it"];
-        }
-        item.tags.admin_level= 3;
-        item.tags.type="Comune";
-      }else if (item.tags.admin_level == PROVINCIA){
-        if(item.tags["official_name"]==="Provincia del Sud Sardegna" ){
-          urlName=item.tags["official_name"];
-        }else{
-          urlName=item.tags["official_name:it"];
-        }
-        item.tags.admin_level= 2;
-        item.tags.type="Provincia";
-      }else if (item.tags.admin_level == REGIONE){
-        urlName=item.tags.name;
-        item.tags.admin_level= 1;
-        item.tags.type="Regione";
-      }
 
-      if(urlName.includes("/")){
-          urlName.split("/")[1]
+      if(item.tags["name"]){
+        urlName=item.tags["name"];
+        if(urlName.includes("/")){
+            urlName.split("/")[1];
+        }
+      }else if(item.tags["name:it"]){
+        urlName=item.tags["name:it"];
+      } else if(item.tags["official_name"]){
+        urlName=item.tags["official_name"];
+      } else if(item.tags["official_name:it"]){
+        urlName=item.tags["official_name:it"];
+      }else{
+        urlName=""+identifier;
       }
 
       if(urlName.includes(" ") && urlName.includes("'")){
@@ -131,7 +125,18 @@ exports.jsonToIndividuals=(item)=>{
       }else{
         item.urlName=urlName;
       }
-      console.log(item.urlName);
+
+      if (item.tags.admin_level == COMUNE){
+        item.tags.admin_level= 3;
+        item.tags.type="Comune";
+      }else if (item.tags.admin_level == PROVINCIA){
+        item.tags.admin_level= 2;
+        item.tags.type="Provincia";
+      }else if (item.tags.admin_level == REGIONE){
+        item.tags.admin_level= 1;
+        item.tags.type="Regione";
+      }
+      //console.log("UrlName",item.urlName);
       return resolve(item);
 
     });

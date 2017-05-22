@@ -19,7 +19,7 @@ exports.sparqlUpdate=(endpoint,graph,json)=>{
         var jsonOsmDbpediaWikidata = JSON.parse(osmDbpediaWikidata);
 
         for (var item of jsonOsmDbpediaWikidata){
-            promises.push(insertIndividual(item,graph));
+            promises.push(insertIndividual(item,graph,json.split("=")[1].split(".")[0]));
         }
 
         Promise.all(promises)
@@ -28,7 +28,7 @@ exports.sparqlUpdate=(endpoint,graph,json)=>{
           for(let i=0;i<results.length;i++){
             setTimeout(function() {
 
-              console.log(i);
+              console.log(`${results[i]}`);
               Client.query(`${results[i]}`)
               .then((insertResult)=>{
 
@@ -48,7 +48,7 @@ exports.sparqlUpdate=(endpoint,graph,json)=>{
 
 }
 
-function insertIndividual(item,graph) {
+function insertIndividual(item,graph,type) {
 
     return individualCreator.jsonToIndividuals(item)
       .then((item)=>{
@@ -61,9 +61,9 @@ function insertIndividual(item,graph) {
 
         let date=Date.now();
         return `  WITH <${graph}>
-                  DELETE { <https://w3id.org/toti/geo/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${item.tags.type}> }
+                  DELETE { <https://w3id.org/toti/geo/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${type}> }
                   INSERT {
-                              <https://w3id.org/toti/geo/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${item.tags.type}>;
+                              <https://w3id.org/toti/geo/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${type}>;
                                                   <https://w3id.org/toti/geo/administrativeLevel> ${item.tags.admin_level};
                                                   <http://www.w3.org/2002/07/owl#sameAs> <https://www.openstreetmap.org/relation/${item.id}>;
                                                   <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/${item.tags.wikidata}>;

@@ -33,18 +33,28 @@ Effettua la chiamata al servizio query-overpass;
 Return:
   - Promise
 **/
-exports.tourism = () => {
+exports.generalQuery = (tags) => {
 
   return new Promise((resolve,reject) => {
 
-    queryOverpass('[out:json];area(3606847723)->.searchArea;(way["tourism"="museum"](area.searchArea);relation["tourism"="museum"](area.searchArea);node["tourism"="museum"](area.searchArea););out;>;out skel qt;', function(error, geojson){
+    queryOverpass(`[out:json];area(3606847723)->.searchArea;(way[${tags}](area.searchArea);relation[${tags}](area.searchArea);node[${tags}](area.searchArea););out;>;out skel qt;`, function(error, geojson){
       if(error){
         return reject(error);
       }
-      console.log(geojson);
       return resolve(geojson);
     });
 
   });
 
+};
+
+/**
+**/
+exports.IdQuery = (id) => {
+  return new Promise((resolve,reject) => {
+        queryOverpass(`[out:json];(${id});out;>;out skel qt;`, function(error, geojson){
+          return resolve(geojson);
+        });
+
+  });
 };
