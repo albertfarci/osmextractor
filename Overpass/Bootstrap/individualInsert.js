@@ -30,9 +30,6 @@ exports.sparqlUpdate=(endpoint,graph,tags)=>{
               promises.push(insertIndividualBoundary(item,graph));
           }
         }else{
-          var osmDbpediaWikidata = fs.readFileSync(`../${values["@id"]}.json`);
-          var jsonOsmDbpediaWikidata = JSON.parse(osmDbpediaWikidata);
-
             for(let i=0;i<fileFromTags.length;i++){
               if(fileFromTags[i].key == tags)
                 {
@@ -98,7 +95,7 @@ function insertGeneralIndividual(item,graph,type) {
                   DELETE { <https://w3id.org/toti/geo/resource/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${type}> }
                   INSERT {
                               <https://w3id.org/toti/geo/resource/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${type}>;
-                              <http://www.w3.org/2002/07/owl#sameAs> <https://www.openstreetmap.org/relation/${item.id}>;`;
+                              <http://www.w3.org/2002/07/owl#sameAs> <https://www.openstreetmap.org/${item.type}/${item.id}>;`;
 
 
                               if(item.tags.wikidata){
@@ -113,7 +110,7 @@ function insertGeneralIndividual(item,graph,type) {
                               <nodeID://b${identifier+1}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
                                                   <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${item.urlName}>;
                                                   <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#sameAs>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedTarget> <https://www.openstreetmap.org/relation/${item.id}>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedTarget> <https://www.openstreetmap.org/${item.type}/${item.id}>;
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
                                                   <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".`;
