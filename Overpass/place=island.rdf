@@ -1,0 +1,265 @@
+
+<owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/-2398432891"><administrativeLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">undefined</administrativeLevel>
+                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/1195291478"/>
+                            <geosparql:hasGeometry rdf:resource="https://w3id.org/toti/geo/TG-2398432891"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/TG-2398432891">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Point(9.086716 40.0298021)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-2398432891"/>
+                              <owl:annotatedProperty rdf:resource="https://w3id.org/toti/geo/administrativeLevel"/>
+                              <owl:annotatedTarget>undefined</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-2398432891"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="https://www.openstreetmap.org/relation/1195291478"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-2398432891"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="http://www.wikidata.org/entity/undefined"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-2398432891"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                              <owl:annotatedTarget rdf:resource="https://w3id.org/toti/geo/TG-2398432891"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/TG-2398432891"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+                              <owl:annotatedTarget>"Point(9.086716 40.0298021)"</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                        
+<owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/-1643166896"><administrativeLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">undefined</administrativeLevel>
+                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/10276782"/>
+                            <geosparql:hasGeometry rdf:resource="https://w3id.org/toti/geo/TG-1643166896"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/TG-1643166896">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon(9.5338928 40.9007058,9.5338499 40.9005177,9.5342276 40.9008096,9.5342877 40.9009848,9.5338928 40.9007058)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-1643166896"/>
+                              <owl:annotatedProperty rdf:resource="https://w3id.org/toti/geo/administrativeLevel"/>
+                              <owl:annotatedTarget>undefined</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-1643166896"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="https://www.openstreetmap.org/relation/10276782"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-1643166896"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="http://www.wikidata.org/entity/undefined"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-1643166896"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                              <owl:annotatedTarget rdf:resource="https://w3id.org/toti/geo/TG-1643166896"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/TG-1643166896"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+                              <owl:annotatedTarget>"Polygon(9.5338928 40.9007058,9.5338499 40.9005177,9.5342276 40.9008096,9.5342877 40.9009848,9.5338928 40.9007058)"</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                        
+<owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/-707159063"><administrativeLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">undefined</administrativeLevel>
+                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/24027391"/>
+                            <geosparql:hasGeometry rdf:resource="https://w3id.org/toti/geo/TG-707159063"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/TG-707159063">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon(9.5362618 40.9025158,9.5367768 40.9025028,9.5371287 40.9026975,9.5372832 40.9028467,9.5375235 40.9028467,9.5377209 40.9030153,9.5374892 40.9030153,9.5372746 40.9028791,9.5370772 40.9028013,9.5367682 40.9027623,9.5364764 40.9026326,9.5362618 40.9025158)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159063"/>
+                              <owl:annotatedProperty rdf:resource="https://w3id.org/toti/geo/administrativeLevel"/>
+                              <owl:annotatedTarget>undefined</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159063"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="https://www.openstreetmap.org/relation/24027391"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159063"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="http://www.wikidata.org/entity/undefined"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159063"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                              <owl:annotatedTarget rdf:resource="https://w3id.org/toti/geo/TG-707159063"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/TG-707159063"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+                              <owl:annotatedTarget>"Polygon(9.5362618 40.9025158,9.5367768 40.9025028,9.5371287 40.9026975,9.5372832 40.9028467,9.5375235 40.9028467,9.5377209 40.9030153,9.5374892 40.9030153,9.5372746 40.9028791,9.5370772 40.9028013,9.5367682 40.9027623,9.5364764 40.9026326,9.5362618 40.9025158)"</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                        
+<owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/-707159061"><administrativeLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">undefined</administrativeLevel>
+                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/24027393"/>
+                            <geosparql:hasGeometry rdf:resource="https://w3id.org/toti/geo/TG-707159061"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/TG-707159061">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon(9.5365021 40.902957,9.5367253 40.9029959,9.5370428 40.9031646,9.5372402 40.9031905,9.5373003 40.9032943,9.5376951 40.9032943,9.5381329 40.903463,9.5384333 40.9037419,9.5385792 40.9040079,9.5381071 40.9038781,9.5377466 40.9037614,9.5375063 40.9035668,9.5373604 40.9034176,9.5371973 40.9033008,9.5369227 40.9032035,9.5366909 40.9031646,9.536545 40.9030867,9.5365021 40.902957)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159061"/>
+                              <owl:annotatedProperty rdf:resource="https://w3id.org/toti/geo/administrativeLevel"/>
+                              <owl:annotatedTarget>undefined</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159061"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="https://www.openstreetmap.org/relation/24027393"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159061"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="http://www.wikidata.org/entity/undefined"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707159061"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                              <owl:annotatedTarget rdf:resource="https://w3id.org/toti/geo/TG-707159061"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/TG-707159061"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+                              <owl:annotatedTarget>"Polygon(9.5365021 40.902957,9.5367253 40.9029959,9.5370428 40.9031646,9.5372402 40.9031905,9.5373003 40.9032943,9.5376951 40.9032943,9.5381329 40.903463,9.5384333 40.9037419,9.5385792 40.9040079,9.5381071 40.9038781,9.5377466 40.9037614,9.5375063 40.9035668,9.5373604 40.9034176,9.5371973 40.9033008,9.5369227 40.9032035,9.5366909 40.9031646,9.536545 40.9030867,9.5365021 40.902957)"</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                        
+<owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/-707158345"><administrativeLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">undefined</administrativeLevel>
+                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/24027416"/>
+                            <geosparql:hasGeometry rdf:resource="https://w3id.org/toti/geo/TG-707158345"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/TG-707158345">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon(9.5345795 40.9010627,9.5346825 40.9011016,9.5348627 40.9012443,9.5348456 40.901413,9.5346653 40.9012508,9.5345795 40.9010627)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707158345"/>
+                              <owl:annotatedProperty rdf:resource="https://w3id.org/toti/geo/administrativeLevel"/>
+                              <owl:annotatedTarget>undefined</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707158345"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="https://www.openstreetmap.org/relation/24027416"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707158345"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="http://www.wikidata.org/entity/undefined"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/-707158345"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                              <owl:annotatedTarget rdf:resource="https://w3id.org/toti/geo/TG-707158345"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/TG-707158345"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+                              <owl:annotatedTarget>"Polygon(9.5345795 40.9010627,9.5346825 40.9011016,9.5348627 40.9012443,9.5348456 40.901413,9.5346653 40.9012508,9.5345795 40.9010627)"</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                        
+<owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/Baecca"><administrativeLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">undefined</administrativeLevel>
+                            <owl:sameAs rdf:resource="https://www.openstreetmap.org/relation/281051337"/>
+                            <geosparql:hasGeometry rdf:resource="https://w3id.org/toti/geo/TG-247681305"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/toti/geo/TG-247681305">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Polygon(9.1542916 41.1979993,9.1544928 41.1980558,9.154531 41.1983072,9.1543628 41.1985706,9.1542818 41.1986873,9.1541868 41.1985249,9.1541018 41.1983683,9.1539753 41.1983861,9.1538507 41.1983083,9.1538586 41.198151,9.1540939 41.1980469,9.1542916 41.1979993)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/Baecca"/>
+                              <owl:annotatedProperty rdf:resource="https://w3id.org/toti/geo/administrativeLevel"/>
+                              <owl:annotatedTarget>undefined</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/Baecca"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="https://www.openstreetmap.org/relation/281051337"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/Baecca"/>
+                              <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+                              <owl:annotatedTarget rdf:resource="http://www.wikidata.org/entity/undefined"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/Baecca"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                              <owl:annotatedTarget rdf:resource="https://w3id.org/toti/geo/TG-247681305"/>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                          <owl:Axiom>
+                              <owl:annotatedSource rdf:resource="https://w3id.org/toti/geo/TG-247681305"/>
+                              <owl:annotatedProperty rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+                              <owl:annotatedTarget>"Polygon(9.1542916 41.1979993,9.1544928 41.1980558,9.154531 41.1983072,9.1543628 41.1985706,9.1542818 41.1986873,9.1541868 41.1985249,9.1541018 41.1983683,9.1539753 41.1983861,9.1538507 41.1983083,9.1538586 41.198151,9.1540939 41.1980469,9.1542916 41.1979993)"</owl:annotatedTarget>
+                              <dc:date>1495618690469</dc:date>
+                              <terms:source>OSM</terms:source>
+                          </owl:Axiom>
+                        
