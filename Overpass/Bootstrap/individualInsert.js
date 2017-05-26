@@ -1,6 +1,6 @@
 var request = require('request');
 var fs = require("fs");
-var encode = require( 'hashcode' ).hashCode;
+var shortid = require('shortid');
 const individualCreator = require('./individualGenerator');
 const fileFromTags = require('./mapFeatures');
 const Sparql = require('virtuoso-sparql-client');
@@ -83,32 +83,37 @@ function insertGeneralIndividual(item,graph,type) {
 
     return individualCreator.jsonToIndividuals(item)
       .then((item)=>{
-        let identifier="";
-        identifier=identifier+encode().value( item.type + "/" +  item.id);
-
-        if(identifier.includes("-")){
-          identifier=identifier.split("-")[1];
-        }
-
         let date=Date.now();
         let insert= `  WITH <${graph}>
-                  DELETE { <https://w3id.org/toti/geo/resource/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${type}> }
+                  DELETE { <https://w3id.org/toti/resource/${item.urlName}> rdf:type <https://w3id.org/toti/${type}> }
                   INSERT {
-                              <https://w3id.org/toti/geo/resource/${item.urlName}> rdf:type <https://w3id.org/toti/geo/${type}>;
-                              <http://www.w3.org/2002/07/owl#sameAs> <https://www.openstreetmap.org/${item.type}/${item.id}>;`;
+                              <https://w3id.org/toti/resource/${item.urlName}> rdf:type <https://w3id.org/toti/${type}>`;
+                              if(item.title){
+                                insert=insert+`
+                                        <https://w3id.org/toti/tempLabel> "${item.title}".
+                                        <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                        <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
+                                                        <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/tempLabel>;
+                                                        <http://www.w3.org/2002/07/owl#annotatedTarget> "${item.title}";
+                                                        <http://purl.org/dc/elements/1.1/date> "${date}";
+                                                        <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
+                                                        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".`;
+                              }
+
+                              insert=insert+`<https://w3id.org/toti/resource/${item.urlName}> <http://www.w3.org/2002/07/owl#sameAs> <https://www.openstreetmap.org/${item.type}/${item.id}>;`;
 
 
                               if(item.tags.wikidata){
                                 insert=insert+`
                                         <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/${item.tags.wikidata}>;`;
                               }
-                                              insert=insert+`<http://www.opengis.net/ont/geosparql#hasGeometry> <https://w3id.org/toti/geo/resource/TG${identifier}>.
+                                              insert=insert+`<http://www.opengis.net/ont/geosparql#hasGeometry> <https://w3id.org/toti/resource/${item.geometry}>.
 
-                              <https://w3id.org/toti/geo/resource/TG${identifier}> rdf:type <http://www.opengis.net/ont/geosparql#Geometry>;
+                              <https://w3id.org/toti/resource/${item.geometry}> rdf:type <http://www.opengis.net/ont/geosparql#Geometry>;
                                                   <http://www.opengis.net/ont/geosparql#asWKT> "${item.wkt}".
 
-                              <nodeID://b${identifier+1}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${item.urlName}>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
                                                   <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#sameAs>;
                                                   <http://www.w3.org/2002/07/owl#annotatedTarget> <https://www.openstreetmap.org/${item.type}/${item.id}>;
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
@@ -116,24 +121,24 @@ function insertGeneralIndividual(item,graph,type) {
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".`;
                             if(item.tags.wikidata){
                                 insert=insert+`
-                                    <nodeID://b${identifier+2}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                    <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${item.urlName}>;
-                                                    <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/geo/administrativeLevel>;
+                                    <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                    <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
+                                                    <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/administrativeLevel>;
                                                     <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.wikidata.org/entity/${item.tags.wikidata}>;
                                                     <http://purl.org/dc/elements/1.1/date> "${date}";
                                                     <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
                                                     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".`;
                             }
                               insert=insert+`
-                              <nodeID://b${identifier+3}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${item.urlName}>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
                                                   <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.opengis.net/ont/geosparql#hasGeometry>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/toti/geo/TG${identifier}>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/toti/resource/${item.geometry}>;
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
                                                   <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".
-                              <nodeID://b${identifier+4}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/TG${identifier}>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.geometry}>;
                                                   <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.opengis.net/ont/geosparql#asWKT>;
                                                   <http://www.w3.org/2002/07/owl#annotatedTarget> "${item.wkt}";
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
@@ -153,74 +158,64 @@ function insertIndividualBoundary(item,graph) {
 
     return individualCreator.jsonToIndividuals(item)
       .then((item)=>{
-        let identifier="";
-        identifier=identifier+encode().value( item.type + "/" +  item.id);
-
-        if(identifier.includes("-")){
-          identifier=identifier.split("-")[1];
-        }
-        let prefix="";
-        if (item.tags.admin_level == 3){
-          item.tags.admin_level= 3;
-          item.tags.type="Comune";
-          prefix="ComuneDi";
-        }else if (item.tags.admin_level == 2){
-          item.tags.type="Provincia";
-          prefix="ProvinciaDi";
-        }else if (item.tags.admin_level == 1){
-          item.tags.type="Regione";
-          prefix="";
-        }
 
         let date=Date.now();
         return `  WITH <${graph}>
-                  DELETE { <https://w3id.org/toti/geo/resource/${prefix}${item.urlName}> rdf:type <https://w3id.org/toti/geo/${item.tags.type}> }
+                  DELETE { <https://w3id.org/toti/resource/${item.urlName}> rdf:type <https://w3id.org/toti/${item.tags.type}> }
                   INSERT {
-                              <https://w3id.org/toti/geo/resource/${prefix}${item.urlName}> rdf:type <https://w3id.org/toti/geo/${item.tags.type}>;
-                                                  <https://w3id.org/toti/geo/administrativeLevel> ${item.tags.admin_level};
+                              <https://w3id.org/toti/resource${item.urlName}> rdf:type <https://w3id.org/toti/${item.tags.type}>;
+                                                  <https://w3id.org/toti/administrativeLevel> ${item.tags.admin_level};
                                                   <http://www.w3.org/2002/07/owl#sameAs> <https://www.openstreetmap.org/relation/${item.id}>;
                                                   <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/${item.tags.wikidata}>;
-                                                  <http://www.opengis.net/ont/geosparql#hasGeometry> <https://w3id.org/toti/geo/resource/TG${identifier}>.
-
-                              <https://w3id.org/toti/geo/resource/TG${identifier}> rdf:type <http://www.opengis.net/ont/geosparql#Geometry>;
+                                                  <http://www.opengis.net/ont/geosparql#hasGeometry> <https://w3id.org/toti/resource/${item.geometry}>;`;
+                              if(item.title){
+                                insert=insert+`
+                                        <https://w3id.org/toti/tempLabel> "${item.title}".
+                                        <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                        <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
+                                                        <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/tempLabel>;
+                                                        <http://www.w3.org/2002/07/owl#annotatedTarget> "${item.title}";
+                                                        <http://purl.org/dc/elements/1.1/date> "${date}";
+                                                        <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
+                                                        <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".`;
+                              }
+                              insert=insert+`<https://w3id.org/toti/resource/${item.geometry}> rdf:type <http://www.opengis.net/ont/geosparql#Geometry>;
                                                   <http://www.opengis.net/ont/geosparql#asWKT> "${item.wkt}".
 
-                              <nodeID://b${identifier}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${prefix}${item.urlName}>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/geo/administrativeLevel>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/administrativeLevel>;
                                                   <http://www.w3.org/2002/07/owl#annotatedTarget> ${item.tags.admin_level};
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
                                                   <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".
-                              <nodeID://b${identifier+1}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${prefix}${item.urlName}>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
                                                   <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#sameAs>;
                                                   <http://www.w3.org/2002/07/owl#annotatedTarget> <https://www.openstreetmap.org/relation/${item.id}>;
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
                                                   <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".
-                              <nodeID://b${identifier+2}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${prefix}${item.urlName}>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/geo/administrativeLevel>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedProperty> <https://w3id.org/toti/administrativeLevel>;
                                                   <http://www.w3.org/2002/07/owl#annotatedTarget> <http://www.wikidata.org/entity/${item.tags.wikidata}>;
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
                                                   <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".
-                              <nodeID://b${identifier+3}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/${prefix}${item.urlName}>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.urlName}>;
                                                   <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.opengis.net/ont/geosparql#hasGeometry>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/toti/geo/resource/TG${identifier}>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedTarget> <https://w3id.org/toti/resource/${item.geometry}>;
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
                                                   <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap/>;
-                                                  <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}";
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".
-                              <nodeID://b${identifier+4}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
-                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/geo/resource/TG${identifier}>;
+                              <nodeID://b${shortid.generate()}> rdf:type <http://www.w3.org/2002/07/owl#Axiom>;
+                                                  <http://www.w3.org/2002/07/owl#annotatedSource> <https://w3id.org/toti/resource/${item.geometry}>;
                                                   <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.opengis.net/ont/geosparql#asWKT>;
                                                   <http://www.w3.org/2002/07/owl#annotatedTarget> "${item.wkt}";
                                                   <http://purl.org/dc/elements/1.1/date> "${date}";
                                                   <http://purl.org/dc/terms/source> <https://w3id.org/toti/OpenStreetMap>;
-                                                  <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}";
                                                   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.openstreetmap.org/${item.type}/${item.id}".
 
                     }`;

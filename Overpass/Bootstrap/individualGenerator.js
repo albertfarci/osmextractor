@@ -1,5 +1,6 @@
 var fs = require("fs");
 var request = require('request');
+var shortid = require('shortid');
 var encode = require( 'hashcode' ).hashCode;
 
 const COMUNE = 8;
@@ -98,39 +99,24 @@ exports.createIndividual = (file)=> {
 
 exports.jsonToIndividuals=(item)=>{
   return new Promise((resolve, reject) => {
-      let urlName="", admLevel;
-
-      let identifier=encode().value( item.type + "/" +  item.id);
-
+      let title="", admLevel;
+      let item.urlName=shortid.generate();
+      //let identifier=encode().value( item.type + "/" +  item.id);
+      let item.geometry=shortid.generate();
       if(item.tags["name"]){
-        urlName=item.tags["name"];
-        if(urlName.includes("/")){
-            urlName=urlName.split("/")[1];
-        }
+        item.title=item.tags["name"];
       }else if(item.tags["name:it"]){
-        urlName=item.tags["name:it"];
+        item.title=item.tags["name:it"];
       } else if(item.tags["official_name"]){
-        urlName=item.tags["official_name"];
+        item.title=item.tags["official_name"];
       } else if(item.tags["official_name:it"]){
-        urlName=item.tags["official_name:it"];
-      }else{
-        urlName="TF"+identifier;
+        item.title=item.tags["official_name:it"];
       }
 
-      if(urlName.includes(" ") && urlName.includes("'")){
-        item.urlName=urlName.split(' ').join('').split("'").join('');
-      } else if(urlName.includes(" ")){
-        item.urlName=urlName.split(' ').join('');
-      }else if(urlName.includes("'")){
-        item.urlName=urlName.split("'").join('');
-      }else{
-        item.urlName=urlName;
-      }
 
       if (item.tags.admin_level == COMUNE){
         item.tags.admin_level= 3;
         item.tags.type="Comune";
-        urlName="Comune";
       }else if (item.tags.admin_level == PROVINCIA){
         item.tags.admin_level= 2;
         item.tags.type="Provincia";
