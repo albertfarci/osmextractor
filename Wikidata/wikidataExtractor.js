@@ -8,7 +8,6 @@ createWikidataJson(jsonOsmDbpedia).then((arrayWikiData) => {
 
 	writeRdf(JSON.stringify(arrayWikiData));
 
-
 });
 
 
