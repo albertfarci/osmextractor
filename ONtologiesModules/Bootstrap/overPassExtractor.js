@@ -79,18 +79,26 @@ exports.nodeResolve=(nodeItems)=>{
     overpassQuery.IdQuery(nodeItems)
           .then((overpassTurbo) => {
                   let nodes=[];
-                  console.log("node",overpassTurbo);
-                  if(overpassTurbo.features){
-                    for(let feature of overpassTurbo.features){
-                        feature.properties.tags=feature.properties.tags;
-                        feature.properties.wkt=`${feature.geometry.type}(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`;
-                        nodes.push(feature.properties);
+                  if(overpassTurbo){
+                    if(overpassTurbo.features){
+                      for(let feature of overpassTurbo.features){
+                          feature.properties.tags=feature.properties.tags;
+                          if(feature.geometry.type == "POLYGON"){
+                            feature.properties.wkt=`${feature.geometry.type}((${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]}))`;
+
+                          }else {
+                            feature.properties.wkt=`${feature.geometry.type}(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`;
+
+                          }
+
+                          nodes.push(feature.properties);
+                      }
+                    }else{
+                      console.log(overpassTurbo);
                     }
-                  }else{
-                    console.log(overpassTurbo);
+                    resolve(nodes);
                   }
 
-                  resolve(nodes);
             })
             .catch((error)=>{
                 console.log(error);
@@ -110,25 +118,38 @@ Return:
 **/
 exports.wayResolve=(wayItems)=>{
   return new Promise((resolve,reject) => {
-    console.log("Way",wayItems);
     overpassQuery.IdQuery(wayItems)
           .then((overpassTurbo) => {
                   let nodes=[];
-                  console.log("way",overpassTurbo);
-                  for(let feature of overpassTurbo.features){
-                      let wkt=`${feature.geometry.type}(`;
-                      //feature.properties.tags=feature.properties.tags;
-                      for(let geometry of feature.geometry.coordinates){
-                        for(let i=0;i<geometry.length;i++){
-                          wkt=wkt+geometry[i][0]+" "+geometry[i][1];
-                          if((i<geometry.length-1)){
-                              wkt=wkt+",";
+                  let wkt;
+                  if(overpassTurbo){
+                    for(let feature of overpassTurbo.features){
+                      if(feature.geometry.type == "Polygon"){
+                        wkt=`${feature.geometry.type}((`;
+
+                      }else {
+                         wkt=`${feature.geometry.type}(`;
+                      }
+                        //feature.properties.tags=feature.properties.tags;
+                        for(let geometry of feature.geometry.coordinates){
+                          for(let i=0;i<geometry.length;i++){
+                            wkt=wkt+geometry[i][0]+" "+geometry[i][1];
+                            if((i<geometry.length-1)){
+                                wkt=wkt+",";
+                            }
                           }
                         }
-                      }
-                      feature.properties.wkt=`${wkt})`;
-                      nodes.push(feature.properties);
+                        if(feature.geometry.type == "Polygon"){
+                          feature.properties.wkt=`${wkt}))`;
+
+                        }else {
+                          feature.properties.wkt=`${wkt})`;
+                        }
+
+                        nodes.push(feature.properties);
+                    }
                   }
+
                   resolve(nodes);
             })
             .catch((error)=>{

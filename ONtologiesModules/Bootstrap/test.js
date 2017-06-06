@@ -22,7 +22,6 @@ if (process.argv[2]) {
 
     console.log(process.argv[2]);
     if (process.argv[2].includes("=")) {
-        console.log("includes =");
 
         for (let key of tagsConstants) {
             if (process.argv[2].split("=")[0] === key.key) {
@@ -43,13 +42,12 @@ if (process.argv[2]) {
 
                                     }else if(geoJsonMap[i].type=="node"){
                                           identifiersNodesForQuery=identifiersNodesForQuery+"node("+geoJsonMap[i].id+");";
-                                          console.log(identifiersNodesForQuery);
                                     }else if(geoJsonMap[i].type=="way"){
                                           identifiersWaysForQuery=identifiersWaysForQuery+"way("+geoJsonMap[i].id+");";
 
                                     }
                                     if(i==geoJsonMap.length-1){
-
+                                        console.log(identifiersWaysForQuery);
                                         promises.push(overpassExtractor.nodeResolve(identifiersNodesForQuery));
                                         promises.push(overpassExtractor.wayResolve(identifiersWaysForQuery));
                                     }
@@ -78,7 +76,7 @@ if (process.argv[2]) {
                             })
                             .then((results) => {
 
-                                fs.writeFile(`./${process.argv[2]}.json`, JSON.stringify(results), function(err) {
+                                fs.writeFile(`../${process.argv[2]}.json`, JSON.stringify(results), function(err) {
                                     if (err)
                                         return console.log(err);
                                     if (process.argv[3]) {
@@ -115,7 +113,7 @@ if (process.argv[2]) {
             })
             .then((results) => {
 
-                fs.writeFile(`./${process.argv[2]}.json`, JSON.stringify(results), function(err) {
+                fs.writeFile(`../${process.argv[2]}.json`, JSON.stringify(results), function(err) {
                     if (err)
                         return console.log(err);
                   /**  if (process.argv[3]) {
@@ -181,7 +179,7 @@ if (process.argv[2]) {
                         return arrayTmp;
                     }).then((results) => {
 
-                        fs.writeFile(`./${process.argv[2]}.json`, JSON.stringify(results), function(err) {
+                        fs.writeFile(`../${process.argv[2]}.json`, JSON.stringify(results), function(err) {
                             if (err)
                                 return console.log(err);
                             if (process.argv[3]) {
@@ -200,7 +198,7 @@ if (process.argv[2]) {
         /**
         Bootstrap per inserire nell'Onotlogia toti/geo gli individui presi dai json scaricati precedentemente da Overpass-turbo
         **/
-        individualInsert.sparqlUpdate("http://localhost:8890/sparql", "https://w3id.org/toti/geo/",  process.argv[3]);
+        individualInsert.sparqlUpdate("http://db.intuit.crs4.it:8890/sparql", "https://w3id.org/toti/",  process.argv[3]);
 
     }
 }

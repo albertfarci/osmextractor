@@ -100,9 +100,9 @@ exports.createIndividual = (file)=> {
 exports.jsonToIndividuals=(item)=>{
   return new Promise((resolve, reject) => {
       let title="", admLevel;
-      let item.urlName=shortid.generate();
+      item.urlName=shortid.generate();
       //let identifier=encode().value( item.type + "/" +  item.id);
-      let item.geometry=shortid.generate();
+      item.geometry=shortid.generate();
       if(item.tags["name"]){
         item.title=item.tags["name"];
       }else if(item.tags["name:it"]){

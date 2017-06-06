@@ -37,7 +37,7 @@ exports.generalQuery = (tags) => {
 
   return new Promise((resolve,reject) => {
 
-    queryOverpass(`[out:json];area(3600039837)->.searchArea;(way[${tags}](area.searchArea);relation[${tags}](area.searchArea);node[${tags}](area.searchArea););out;>;out skel qt;`, function(error, geojson){
+    queryOverpass(`[out:json];area(3606847723)->.searchArea;(way[${tags}](area.searchArea);relation[${tags}](area.searchArea);node[${tags}](area.searchArea););out;>;out skel qt;`, function(error, geojson){
       if(error){
         return reject(error);
       }
