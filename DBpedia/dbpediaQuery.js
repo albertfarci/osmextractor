@@ -54,15 +54,16 @@ exports.individuals=(item,i)=>{
         }
         where
         {
-        ?subj owl:sameAs wikidata:${item.tags.wikidata}.
-             ?subj ?prop ?obj
+            ?subj owl:sameAs wikidata:${item.tags.wikidata}.
+            ?subj ?prop ?obj
         }
+
 
       `)
       .then((results)=>{
         if(results){
           if (results["@graph"] != undefined){
-            //console.log(results["@graph"]);
+            console.log(results);
             resolve(results["@graph"][0]);
           }else{
             resolve(results);
@@ -72,6 +73,6 @@ exports.individuals=(item,i)=>{
 
       })
       .catch(reject);
-    }, 1500*i);
+    }, 1500);
   });
 };

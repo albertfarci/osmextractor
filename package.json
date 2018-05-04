@@ -5,6 +5,6 @@
     "query-overpass": "^1.4.0",
     "request": "^2.81.0",
     "shortid": "^2.2.8",
-    "virtuoso-sparql-client": "0.0.4"
+    "virtuoso-sparql-client": "^0.2.0"
   }
 }

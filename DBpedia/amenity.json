@@ -1,0 +1,1342 @@
+[
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "@id": "http://dbpedia.org/resource/Cagliari_Cathedral",
+        "@type": [
+            "http://dbpedia.org/class/yago/PhysicalEntity100001930",
+            "http://dbpedia.org/class/yago/Whole100003553",
+            "http://dbpedia.org/ontology/HistoricBuilding",
+            "http://dbpedia.org/class/yago/WikicatCathedralsInItaly",
+            "http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity",
+            "http://dbpedia.org/class/yago/YagoGeoEntity",
+            "http://dbpedia.org/class/yago/WikicatBuildingsAndStructuresInCagliari",
+            "http://dbpedia.org/class/yago/Church103028079",
+            "http://dbpedia.org/class/yago/PlaceOfWorship103953416",
+            "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+            "http://dbpedia.org/class/yago/WikicatChurchesInSardinia",
+            "http://dbpedia.org/class/yago/Artifact100021939",
+            "http://dbpedia.org/class/yago/Cathedral102984061",
+            "http://dbpedia.org/class/yago/Building102913152",
+            "http://dbpedia.org/class/yago/Object100002684",
+            "http://dbpedia.org/class/yago/Structure104341686"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Cattedrale di Santa Maria (Cagliari)",
+                "@language": "it"
+            },
+            {
+                "@value": "Catedral de Santa María de Cagliari",
+                "@language": "es"
+            },
+            {
+                "@value": "Cathédrale Sainte-Marie de Cagliari",
+                "@language": "fr"
+            },
+            {
+                "@value": "Cagliari Cathedral",
+                "@language": "en"
+            },
+            {
+                "@value": "卡利亞里主教座堂",
+                "@language": "zh"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "La catedral de Cagliari, llamada comúnmente catedral de Santa María, es una iglesia católica italiana dedicada a la Asunción de la Virgen y a Santa Cecilia. Es la iglesia principal de la archidiócesis de Cagliari, sede de la cátedra del arzobispo metropolitano, y además templo parroquial del barrio histórico de Castello. La catedral, además de ser un importante lugar de culto en el que se desarrollan las principales celebraciones del año litúrgico precedidas por el arzobispo, es uno de los monumentos más notables y visitados de la ciudad.",
+                "@language": "es"
+            },
+            {
+                "@value": "La Cathédrale Sainte-Marie est une église de la ville de Cagliari, sur l'île italienne de Sardaigne. Elle a été construite au XIIIe siècle dans le style romano-pisan et a obtenu le statut de cathédrale en 1258. Aux XVIIe et XVIIIe siècles, elle a été rénovée en style baroque puis, en 1930, dans le style néo-roman, en s'inspirant de la cathédrale de Pise.",
+                "@language": "fr"
+            },
+            {
+                "@value": "Cagliari Cathedral (Italian: Duomo di Cagliari, Cattedrale di Santa Maria e Santa Cecilia) is a Roman Catholic cathedral in Cagliari, Sardinia, Italy, dedicated to the Virgin Mary and to Saint Cecilia. It is the seat of the archbishop of Cagliari. The church was built in the 13th century in Pisan-Romanesque style, obtaining cathedral status in 1258. In the 17th and 18th centuries it was renovated along Baroque lines. In the 1930s it finally received the current façade, in Neo-Romanesque style, inspired by Pisa Cathedral.",
+                "@language": "en"
+            },
+            {
+                "@value": "卡利亞里主教座堂（意大利语：Duomo di Cagliari, Cattedrale di Santa Maria e Santa Cecilia）是位於義大利撒丁島卡利亞里的一座羅馬天主教的主教座堂。 也是天主教卡利亞里總教區的主教座堂。教堂始建於13世紀，在17和18世紀曾進行翻修，1930年代時建為現在的外觀。",
+                "@language": "zh"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#sameAs": [
+            {
+                "@id": "http://it.dbpedia.org/resource/Cattedrale_di_Santa_Maria_(Cagliari)"
+            },
+            {
+                "@id": "http://wikidata.dbpedia.org/resource/Q1073495"
+            },
+            {
+                "@id": "http://rdf.freebase.com/ns/m.0ddhp1r"
+            },
+            {
+                "@id": "http://yago-knowledge.org/resource/Cagliari_Cathedral"
+            },
+            {
+                "@id": "http://es.dbpedia.org/resource/Catedral_de_Santa_María_de_Cagliari"
+            },
+            {
+                "@id": "http://fr.dbpedia.org/resource/Cathédrale_Sainte-Marie_de_Cagliari"
+            },
+            {
+                "@id": "http://www.wikidata.org/entity/Q1073495"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@id": "http://dbpedia.org/resource/Category:Cathedrals_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Cathedrals_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Romanesque_architecture_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Churches_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Roman_Catholic_cathedrals_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:13th-century_Roman_Catholic_church_buildings"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageID": 28904391,
+        "http://dbpedia.org/ontology/wikiPageRevisionID": 726994451,
+        "http://dbpedia.org/ontology/wikiPageWikiLink": [
+            {
+                "@id": "http://dbpedia.org/resource/Clement_VII"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Santa_Igia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Ambon_(liturgy)"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Cathedrals_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/New_Testament"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Cathedrals_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Pisa_Cathedral"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Cagliari_Kathedrale.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Cagliari_kathedrale_fassade01.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Latin_cross"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Mullioned_window"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Saint_Cecilia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Baroque_architecture"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Romanesque_architecture_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Rogier_van_der_Weyden"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cathedral"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Gothic_architecture_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Martin_I_of_Sicily"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cross_vault"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Diocese_of_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Cattedraleca30.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Cattedraleca55.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Archbishop_of_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Giudicato_of_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Kingdom_of_Aragon"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Presbytery_(architecture)"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Roman_Catholic"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Churches_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:MausoleoMartinoII.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Transept"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:13th-century_Roman_Catholic_church_buildings"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Basilica_of_San_Saturnino"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Bernardo_de_La_Cabra"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Republic_of_Pisa"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Roman_Catholic_cathedrals_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Virgin_Mary"
+            }
+        ],
+        "http://www.w3.org/2003/01/geo/wgs84_pos#lat": 39.21888732910156,
+        "http://www.w3.org/2003/01/geo/wgs84_pos#long": 9.11722183227539,
+        "http://xmlns.com/foaf/0.1/depiction": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Cagliari_kathedrale_fassade01.jpg"
+        },
+        "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+            "@id": "http://en.wikipedia.org/wiki/Cagliari_Cathedral"
+        },
+        "http://www.w3.org/2003/01/geo/wgs84_pos#geometry": {
+            "@value": "POINT(9.1172218322754 39.218887329102)",
+            "@type": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        },
+        "http://dbpedia.org/ontology/thumbnail": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Cagliari_kathedrale_fassade01.jpg?width=300"
+        },
+        "http://www.w3.org/ns/prov#wasDerivedFrom": {
+            "@id": "http://en.wikipedia.org/wiki/Cagliari_Cathedral?oldid=726994451"
+        },
+        "http://dbpedia.org/ontology/abstract": [
+            "La Cathédrale Sainte-Marie est une église de la ville de Cagliari, sur l'île italienne de Sardaigne. Elle a été construite au XIIIe siècle dans le style romano-pisan et a obtenu le statut de cathédrale en 1258. Aux XVIIe et XVIIIe siècles, elle a été rénovée en style baroque puis, en 1930, dans le style néo-roman, en s'inspirant de la cathédrale de Pise.",
+            "Cagliari Cathedral (Italian: Duomo di Cagliari, Cattedrale di Santa Maria e Santa Cecilia) is a Roman Catholic cathedral in Cagliari, Sardinia, Italy, dedicated to the Virgin Mary and to Saint Cecilia. It is the seat of the archbishop of Cagliari. The church was built in the 13th century in Pisan-Romanesque style, obtaining cathedral status in 1258. In the 17th and 18th centuries it was renovated along Baroque lines. In the 1930s it finally received the current façade, in Neo-Romanesque style, inspired by Pisa Cathedral.",
+            "卡利亞里主教座堂（意大利语：Duomo di Cagliari, Cattedrale di Santa Maria e Santa Cecilia）是位於義大利撒丁島卡利亞里的一座羅馬天主教的主教座堂。 也是天主教卡利亞里總教區的主教座堂。教堂始建於13世紀，在17和18世紀曾進行翻修，1930年代時建為現在的外觀。",
+            "La catedral de Cagliari, llamada comúnmente catedral de Santa María, es una iglesia católica italiana dedicada a la Asunción de la Virgen y a Santa Cecilia. Es la iglesia principal de la archidiócesis de Cagliari, sede de la cátedra del arzobispo metropolitano, y además templo parroquial del barrio histórico de Castello. La iglesia amalgama diversos estilos artísticos y custodia siete siglos de memoria histórica de la ciudad de Cagliari. Construida durante el siglo XIII en estilo románico pisano, fue elevada al rango de catedral en 1258. Cuando Cagliari fue capital del reino de Cerdeña, ahí prestaban juramento los representantes de los tres stamenti (brazos del parlamento sardo). Durante el siglo XVII, se decidió transformar el templo en un nuevo estilo, el barroco. En la década de 1930 fue erigida la actual fachada neorrománica, inspirada en la fachada de la catedral de Pisa. La catedral, además de ser un importante lugar de culto en el que se desarrollan las principales celebraciones del año litúrgico precedidas por el arzobispo, es uno de los monumentos más notables y visitados de la ciudad."
+        ],
+        "http://www.georss.org/georss/point": "39.21888888888889 9.117222222222223",
+        "http://purl.org/voc/vrank#hasRank": {
+            "@id": "_:vb25607722"
+        },
+        "http://purl.org/linguistics/gold/hypernym": {
+            "@id": "http://dbpedia.org/resource/Cathedral"
+        }
+    },
+    {},
+    {},
+    {},
+    {},
+    {
+        "@id": "http://dbpedia.org/resource/Santa_Maria,_Uta",
+        "@type": [
+            "http://dbpedia.org/class/yago/Structure104341686",
+            "http://dbpedia.org/class/yago/Whole100003553",
+            "http://dbpedia.org/class/yago/Artifact100021939",
+            "http://dbpedia.org/class/yago/Church103028079",
+            "http://dbpedia.org/class/yago/YagoGeoEntity",
+            "http://dbpedia.org/class/yago/PhysicalEntity100001930",
+            "http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity",
+            "http://dbpedia.org/ontology/Building",
+            "http://dbpedia.org/class/yago/WikicatChurchesInSardinia",
+            "http://dbpedia.org/class/yago/Building102913152",
+            "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+            "http://dbpedia.org/class/yago/PlaceOfWorship103953416",
+            "http://dbpedia.org/class/yago/Wikicat12th-centuryReligiousBuildings",
+            "http://dbpedia.org/class/yago/Object100002684"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Santa Maria, Uta",
+                "@language": "en"
+            },
+            {
+                "@value": "Chiesa di Santa Maria (Uta)",
+                "@language": "it"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": {
+            "@value": "Santa Maria is a medieval church in the comune of Uta, Sardinia, Italy. The exact date of construction is unknown, although it is generally assigned to the mid-12th century by monks from the Abbey of St. Victor in Marseille, perhaps on the ruins of a pre-existing structure. It is an example of Provençal and Tuscan Romanesque styles' influence on the local medieval architecture (at the time the area was under the rule of the Republic of Pisa).",
+            "@language": "en"
+        },
+        "http://www.w3.org/2002/07/owl#sameAs": [
+            {
+                "@id": "http://yago-knowledge.org/resource/Santa_Maria,_Uta"
+            },
+            {
+                "@id": "http://wikidata.dbpedia.org/resource/Q287802"
+            },
+            {
+                "@id": "http://www.wikidata.org/entity/Q287802"
+            },
+            {
+                "@id": "http://it.dbpedia.org/resource/Chiesa_di_Santa_Maria_(Uta)"
+            },
+            {
+                "@id": "http://rdf.freebase.com/ns/m.0jwrtbv"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@id": "http://dbpedia.org/resource/Category:Romanesque_architecture_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Churches_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:12th-century_churches"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageID": 35900414,
+        "http://dbpedia.org/ontology/wikiPageRevisionID": 671680673,
+        "http://dbpedia.org/ontology/wikiPageWikiLink": [
+            {
+                "@id": "http://dbpedia.org/resource/Abbey_of_St._Victor,_Marseille"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Comune"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Pilaster"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Peter_IV_of_Aragon"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Churches_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Provence"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Romanesque_architecture_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:12th-century_churches"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Lesene"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Mullioned_window"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Tuscany"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Sandstone"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Knights_Hospitaller"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Smaria_uta3.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Republic_of_Pisa"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Uta,_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Smaria_uta1.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Smaria_uta2.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Lombard_bands"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Presbytery_(architecture)"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Knights_of_St._George_of_Alfama"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/High_altar"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Marseille"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Franciscans"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Archdiocese_of_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Holy_water_font"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageExternalLink": {
+            "@id": "http://www.santamariadiuta.org/"
+        },
+        "http://xmlns.com/foaf/0.1/homepage": {
+            "@id": "http://www.santamariadiuta.org/"
+        },
+        "http://www.w3.org/2003/01/geo/wgs84_pos#lat": 39.28630065917969,
+        "http://www.w3.org/2003/01/geo/wgs84_pos#long": 8.969900131225586,
+        "http://xmlns.com/foaf/0.1/depiction": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Smaria_uta1.jpg"
+        },
+        "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+            "@id": "http://en.wikipedia.org/wiki/Santa_Maria,_Uta"
+        },
+        "http://www.w3.org/2003/01/geo/wgs84_pos#geometry": {
+            "@value": "POINT(8.9699001312256 39.28630065918)",
+            "@type":  "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        },
+        "http://dbpedia.org/ontology/thumbnail": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Smaria_uta1.jpg?width=300"
+        },
+        "http://www.w3.org/ns/prov#wasDerivedFrom": {
+            "@id": "http://en.wikipedia.org/wiki/Santa_Maria,_Uta?oldid=671680673"
+        },
+        "http://dbpedia.org/ontology/abstract": "Santa Maria is a medieval church in the comune of Uta, Sardinia, Italy. The exact date of construction is unknown, although it is generally assigned to the mid-12th century by monks from the Abbey of St. Victor in Marseille, perhaps on the ruins of a pre-existing structure. It is an example of Provençal and Tuscan Romanesque styles' influence on the local medieval architecture (at the time the area was under the rule of the Republic of Pisa). The oldest known mention of the church is in a 1363 document, by which king Peter IV of Aragon switched it from the Knights Hospitaller to the Order of Sant Jordi d'Alfama. The edifice was later held by the Franciscans, who, in the late 16th century, gave it to the archdiocese of Cagliari.",
+        "http://www.georss.org/georss/point": "39.2863 8.9699",
+        "http://purl.org/voc/vrank#hasRank": {
+            "@id": "_:vb25382567"
+        },
+        "http://purl.org/linguistics/gold/hypernym": {
+            "@id": "http://dbpedia.org/resource/Church"
+        }
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "@id": "http://dbpedia.org/resource/Shrine_of_Our_Lady_of_Bonaria",
+        "@type": [
+            "http://dbpedia.org/class/yago/Shrine104210390",
+            "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+            "http://dbpedia.org/class/yago/PhysicalEntity100001930",
+            "http://dbpedia.org/class/yago/Object100002684",
+            "http://dbpedia.org/class/yago/Structure104341686",
+            "http://dbpedia.org/class/yago/PlaceOfWorship103953416",
+            "http://dbpedia.org/class/yago/Whole100003553",
+            "http://dbpedia.org/class/yago/YagoGeoEntity",
+            "http://dbpedia.org/class/yago/Building102913152",
+            "http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity",
+            "http://dbpedia.org/class/yago/Artifact100021939",
+            "http://dbpedia.org/class/yago/WikicatMarianShrines"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Basilika Unserer Lieben Frau von Bonaria",
+                "@language": "de"
+            },
+            {
+                "@value": "Shrine of Our Lady of Bonaria",
+                "@language": "en"
+            },
+            {
+                "@value": "Santuario di Nostra Signora di Bonaria",
+                "@language": "it"
+            },
+            {
+                "@value": "Santuario de Nuestra Señora de Bonaria",
+                "@language": "es"
+            },
+            {
+                "@value": "鲍娜利亚圣母朝圣地",
+                "@language": "zh"
+            },
+            {
+                "@value": "Basilique Notre-Dame de Bonaria",
+                "@language": "fr"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Die römisch-katholische Basilika Unserer Lieben Frau von Bonaria (Basilica di Nostra Signora di Bonaria) in Cagliari bildet zusammen mit der alten Wallfahrtskirche Santuario di Bonaria und dem Klosterkomplex der Mercedarier das größte Wallfahrtszentrum auf Sardinien. Es ist der Gottesmutter Maria als Schutzpatronin der Insel und der Seefahrer geweiht.",
+                "@language": "de"
+            },
+            {
+                "@value": "El santuario de Nuestra Señora de Bonaria es el principal templo mariano de la isla de Cerdeña, en Italia. Se encuentra en la capital de la isla, Cagliari, en la colina de Bonaria. El Santuario se compone de una pequeña iglesia (el original templo del siglo IV) que se acompaña de un templo más grande, elevado al título de Basílica Menor por el Papa Pío XI en 1926. El Santuario de la Virgen de Bonaria es custodiado por los padres mercedarios, que habitan en el convento adyacente. El Santuario es además, la sede de la parroquia del barrio de Bonaria, siendo Nuestra Señora de Bonaria (o del \"Buen Aire\"), la Patrona Principal de la isla de Cerdeña y patrona de los marineros italianos.",
+                "@language": "es"
+            },
+            {
+                "@value": "La Basilique Notre-Dame de Bonaria (Basilica minore di Nostra Signora di Bonaria en italien) est un sanctuaire religieux de la ville de Cagliari en Sardaigne. Il s'agit du sanctuaire marial le plus important de Sardaigne pour l'Église catholique. Il est constitué d'une petite église, à côté de laquelle se trouve un temple plus grand, élevé au titre de basilique mineure par Pie XI en 1926. Le sanctuaire est géré par l'Ordre de Notre-Dame-de-la-Merci qui occupe le couvent adjacent.",
+                "@language": "fr"
+            },
+            {
+                "@value": "鲍娜利亚圣母朝圣地（Santuario di Nostra Signora di Bonaria）是一处罗马天主教的圣母朝圣地，位于意大利撒丁岛首府卡利亚里。整个朝圣地建筑群包括鲍娜利亚圣母圣殿、鲍娜利亚圣母朝圣所和修道院。自1335年10月17日以来一直由圣母赎虏会管理。 鲍娜利亚圣母像通常描绘圣母怀抱圣婴，还有一艘金色的帆船，右手持蜡烛，为水手、撒丁岛以及布宜诺斯艾利斯的主保圣人。该图像代表坎德拉里亚圣母。",
+                "@language": "zh"
+            },
+            {
+                "@value": "The Shrine of Our Lady of Bonaria also known as Our Lady of Fair Winds is a Marian title associated with the Blessed Virgin Mary as Star of the Sea and patron of sailboats. In addition, it is first associated with a Roman Catholic shrine to the Blessed Virgin Mary located in Cagliari, Sardinia (Italy).",
+                "@language": "en"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#sameAs": [
+            {
+                "@id": "http://de.dbpedia.org/resource/Basilika_Unserer_Lieben_Frau_von_Bonaria"
+            },
+            {
+                "@id": "http://rdf.freebase.com/ns/m.04n4t5g"
+            },
+            {
+                "@id": "http://www.wikidata.org/entity/Q2886939"
+            },
+            {
+                "@id": "http://wikidata.dbpedia.org/resource/Q2886939"
+            },
+            {
+                "@id": "http://it.dbpedia.org/resource/Santuario_di_Nostra_Signora_di_Bonaria"
+            },
+            {
+                "@id": "http://yago-knowledge.org/resource/Shrine_of_Our_Lady_of_Bonaria"
+            },
+            {
+                "@id": "http://fr.dbpedia.org/resource/Basilique_Notre-Dame_de_Bonaria"
+            },
+            {
+                "@id": "http://es.dbpedia.org/resource/Santuario_de_Nuestra_Señora_de_Bonaria"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@id": "http://dbpedia.org/resource/Category:Basilica_churches_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Recipients_of_the_Golden_Rose"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Marian_shrines"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageID": 19433522,
+        "http://dbpedia.org/ontology/wikiPageRevisionID": 737106999,
+        "http://dbpedia.org/ontology/wikiPageWikiLink": [
+            {
+                "@id": "http://dbpedia.org/resource/Patroness"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Our_Lady,_Star_of_the_Sea"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Andalusia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Sailboat"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Pope_Benedict_XVI"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Argentina"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Mediterranean_Sea"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Scalinata_N.S._di_Bonaria_-_Cagliari.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Basilica"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Nativity_of_Mary"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Monastery"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Buenos_Aires,_Argentina"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Buenos_Aires"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Recipients_of_the_Golden_Rose"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Cagliari_-_Santuario_della_Madonna_di_Bonaria_(03).JPG"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Mercedarians"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Cagliari_-_Santuario_della_Madonna_di_Bonaria_(09).JPG"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Shrine"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Shipwreck"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Canonical_coronation"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Child_Jesus"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Religious_order"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Friars"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Holy_Trinity"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Italian_peninsula"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Abbey"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Sanctuary_of_Our_Lady_of_Bonaria"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Virgin_of_Candelaria"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Golden_Rose"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Pope_Francis"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Virgin_Mary"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Swampland"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Blessed_Virgin_Mary"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Seville"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Roman_Catholic"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Our_Lady_of_Bonaria"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Order_of_the_Blessed_Virgin_Mary_of_Mercy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Pedro_de_Mendoza"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Crown_of_Aragon"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Pontiff"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/The_Basilica_of_Our_Lady_of_Bonaria"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Pisa"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Sardinian_language"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Marian_shrines"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Patron"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Navigation"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Basilica_churches_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Alfonso_IV_of_Aragon"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageExternalLink": [
+            {
+                "@id": "http://www.nsdibonaria.it"
+            },
+            {
+                "@id": "http://www.orderofmercy.org"
+            }
+        ],
+        "http://www.w3.org/2003/01/geo/wgs84_pos#lat": 39.20849990844727,
+        "http://www.w3.org/2003/01/geo/wgs84_pos#long": 9.125699996948242,
+        "http://xmlns.com/foaf/0.1/depiction": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Scalinata_N.S._di_Bonaria_-_Cagliari.jpg"
+        },
+        "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+            "@id": "http://en.wikipedia.org/wiki/Shrine_of_Our_Lady_of_Bonaria"
+        },
+        "http://www.w3.org/2003/01/geo/wgs84_pos#geometry": {
+            "@value": "POINT(9.1256999969482 39.208499908447)",
+            "@type": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        },
+        "http://dbpedia.org/ontology/thumbnail": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Scalinata_N.S._di_Bonaria_-_Cagliari.jpg?width=300"
+        },
+        "http://www.w3.org/ns/prov#wasDerivedFrom": {
+            "@id": "http://en.wikipedia.org/wiki/Shrine_of_Our_Lady_of_Bonaria?oldid=737106999"
+        },
+        "http://dbpedia.org/ontology/abstract": [
+            "La Basilique Notre-Dame de Bonaria (Basilica minore di Nostra Signora di Bonaria en italien) est un sanctuaire religieux de la ville de Cagliari en Sardaigne. Il s'agit du sanctuaire marial le plus important de Sardaigne pour l'Église catholique. Il est constitué d'une petite église, à côté de laquelle se trouve un temple plus grand, élevé au titre de basilique mineure par Pie XI en 1926. Le sanctuaire est géré par l'Ordre de Notre-Dame-de-la-Merci qui occupe le couvent adjacent.",
+            "Die römisch-katholische Basilika Unserer Lieben Frau von Bonaria (Basilica di Nostra Signora di Bonaria) in Cagliari bildet zusammen mit der alten Wallfahrtskirche Santuario di Bonaria und dem Klosterkomplex der Mercedarier das größte Wallfahrtszentrum auf Sardinien. Es ist der Gottesmutter Maria als Schutzpatronin der Insel und der Seefahrer geweiht.",
+            "The Shrine of Our Lady of Bonaria also known as Our Lady of Fair Winds is a Marian title associated with the Blessed Virgin Mary as Star of the Sea and patron of sailboats. In addition, it is first associated with a Roman Catholic shrine to the Blessed Virgin Mary located in Cagliari, Sardinia (Italy). The Shrine is part of a complex of buildings which include the Basilica of Our Lady of Bonaria, the Sanctuary of Our Lady of Bonaria and the monastery which houses the friars of the Order of the Blessed Virgin Mary of Mercy. The Basilica and the other structures are under the administration of the Mercedarians, a religious order which has overseen the care of the shrine continuously since October 17, 1335. Mary under this Marian title, is often portrayed carrying the Child Jesus, along with a golden sailboat and a candle in her right arm is invoked as the Patroness of Sardinia as well as Buenos Aires, Argentina, to which Pope Francis is also a known devotee. The Virgin of Bonaria is a representation of the Virgin of Candelaria.",
+            "鲍娜利亚圣母朝圣地（Santuario di Nostra Signora di Bonaria）是一处罗马天主教的圣母朝圣地，位于意大利撒丁岛首府卡利亚里。整个朝圣地建筑群包括鲍娜利亚圣母圣殿、鲍娜利亚圣母朝圣所和修道院。自1335年10月17日以来一直由圣母赎虏会管理。 鲍娜利亚圣母像通常描绘圣母怀抱圣婴，还有一艘金色的帆船，右手持蜡烛，为水手、撒丁岛以及布宜诺斯艾利斯的主保圣人。该图像代表坎德拉里亚圣母。",
+            "El santuario de Nuestra Señora de Bonaria es el principal templo mariano de la isla de Cerdeña, en Italia. Se encuentra en la capital de la isla, Cagliari, en la colina de Bonaria. El Santuario se compone de una pequeña iglesia (el original templo del siglo IV) que se acompaña de un templo más grande, elevado al título de Basílica Menor por el Papa Pío XI en 1926. El Santuario de la Virgen de Bonaria es custodiado por los padres mercedarios, que habitan en el convento adyacente. El Santuario es además, la sede de la parroquia del barrio de Bonaria, siendo Nuestra Señora de Bonaria (o del \"Buen Aire\"), la Patrona Principal de la isla de Cerdeña y patrona de los marineros italianos."
+        ],
+        "http://www.georss.org/georss/point": "39.2085 9.1257",
+        "http://purl.org/voc/vrank#hasRank": {
+            "@id": "_:vb25923082"
+        },
+        "http://purl.org/linguistics/gold/hypernym": {
+            "@id": "http://dbpedia.org/resource/Title"
+        }
+    },
+    {
+        "@id": "http://dbpedia.org/resource/Basilica_of_San_Saturnino",
+        "@type": [
+            "http://dbpedia.org/class/yago/Whole100003553",
+            "http://dbpedia.org/class/yago/WikicatBasilicaChurchesInItaly",
+            "http://dbpedia.org/class/yago/PhysicalEntity100001930",
+            "http://dbpedia.org/class/yago/Housing103546340",
+            "http://dbpedia.org/class/yago/Building102913152",
+            "http://dbpedia.org/class/yago/Church103028079",
+            "http://dbpedia.org/class/yago/Residence104079244",
+            "http://dbpedia.org/class/yago/PlaceOfWorship103953416",
+            "http://dbpedia.org/class/yago/Monastery103781244",
+            "http://dbpedia.org/class/yago/Artifact100021939",
+            "http://dbpedia.org/class/yago/ReligiousResidence104073948",
+            "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+            "http://dbpedia.org/class/yago/WikicatBuildingsAndStructuresInCagliari",
+            "http://dbpedia.org/class/yago/House103544360",
+            "http://dbpedia.org/class/yago/Structure104341686",
+            "http://dbpedia.org/class/yago/YagoGeoEntity",
+            "http://dbpedia.org/class/yago/WikicatBenedictineMonasteriesInItaly",
+            "http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity",
+            "http://dbpedia.org/class/yago/Dwelling103259505",
+            "http://dbpedia.org/ontology/Building",
+            "http://dbpedia.org/class/yago/WikicatChurchesInSardinia",
+            "http://dbpedia.org/class/yago/Object100002684"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Basílica de San Saturnino (Cagliari)",
+                "@language": "es"
+            },
+            {
+                "@value": "Basilique San Saturnino",
+                "@language": "fr"
+            },
+            {
+                "@value": "聖薩圖里諾教堂",
+                "@language": "zh"
+            },
+            {
+                "@value": "Basilica di San Saturnino",
+                "@language": "it"
+            },
+            {
+                "@value": "Basilica of San Saturnino",
+                "@language": "en"
+            },
+            {
+                "@value": "San Saturno",
+                "@language": "de"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "The Basilica of San Saturnino is a Palaeo-Christian church in Cagliari, southern Sardinia, Italy.",
+                "@language": "en"
+            },
+            {
+                "@value": "La basílica de San Saturnino es la iglesia más antigua de Cagliari, dedicada al patrono de la ciudad. Se encuentra en el barrio Villanova, en la plaza San Cósimo. La iglesia y el cementerio adyacentes, que se extiende también bajo la cercana iglesia de San Lucifer, es uno de los más importantes y antiguos complejos paleocristianos de Cerdeña.",
+                "@language": "es"
+            },
+            {
+                "@value": "La Basilique San Saturnino est un basilique religieuse située à Cagliari la capitale de la province italienne de la Sardaigne.",
+                "@language": "fr"
+            },
+            {
+                "@value": "聖薩圖里諾教堂（意大利语：Basilica di San Saturnino）是位於義大利撒丁島南部的一座教堂。教堂首次被提到是在6世紀初，1089年時，教堂進行了重建。1324年時，教堂被毀。1714年，教堂得到了重建。1943年時，教堂被盟軍轟炸，戰後得到修復。1978年至1996年期間，教堂一度關閉進行修復。2004年，教堂重新對外開放。",
+                "@language": "zh"
+            },
+            {
+                "@value": "Die im 5. Jahrhundert begonnene Basilika San Saturno entstand im römischen Carales, dem heutigen Cagliari. Der Baurest des einstigen Kreuzkuppelbaus gehört zu den ältesten Kirchenruinen im mediterranen Raum und war Vorbild für die (erhaltenen) byzantinischen Kirchen auf Sardinien.",
+                "@language": "de"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#sameAs": [
+            {
+                "@id": "http://www.wikidata.org/entity/Q747586"
+            },
+            {
+                "@id": "http://fr.dbpedia.org/resource/Basilique_San_Saturnino"
+            },
+            {
+                "@id": "http://it.dbpedia.org/resource/Basilica_di_San_Saturnino"
+            },
+            {
+                "@id": "http://yago-knowledge.org/resource/Basilica_of_San_Saturnino"
+            },
+            {
+                "@id": "http://rdf.freebase.com/ns/m.0dgns9j"
+            },
+            {
+                "@id": "http://wikidata.dbpedia.org/resource/Q747586"
+            },
+            {
+                "@id": "http://de.dbpedia.org/resource/San_Saturno"
+            },
+            {
+                "@id": "http://es.dbpedia.org/resource/Basílica_de_San_Saturnino_(Cagliari)"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_completed_in_1119"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Benedictine_monasteries_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:12th-century_Roman_Catholic_church_buildings"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Palaeo-Christian_architecture_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Basilica_churches_in_Sardinia"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageID": 28904986,
+        "http://dbpedia.org/ontology/wikiPageRevisionID": 666651301,
+        "http://dbpedia.org/ontology/wikiPageWikiLink": [
+            {
+                "@id": "http://dbpedia.org/resource/File:Ssaturnino2.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_completed_in_1119"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Kingdom_of_Aragon"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Barrel_vault"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Lombard_band"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Knights_of_Sant_Jordi_d'Alfama"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Abbey_of_St._Victor,_Marseille"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Marseille"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Constantine_II_of_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Peter_IV_of_Aragon"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Benedictine_monasteries_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Giudicato_of_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Apse"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cagliari_Cathedral"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cross_vault"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:12th-century_Roman_Catholic_church_buildings"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Transept"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Saturninus_of_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Benedictine"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Palaeo-Christian_architecture_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Romanesque_architecture"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Limestone"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Greek_cross"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/World_War_II"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Basilica_di_San_Saturnino-Cagliari2.JPG"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Basilica_churches_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cosmas_and_Damian"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Architrave"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Lunette"
+            }
+        ],
+        "http://www.w3.org/2003/01/geo/wgs84_pos#lat": 39.21389007568359,
+        "http://www.w3.org/2003/01/geo/wgs84_pos#long": 9.123332977294922,
+        "http://xmlns.com/foaf/0.1/depiction": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Saturnino-Cagliari2.JPG"
+        },
+        "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+            "@id": "http://en.wikipedia.org/wiki/Basilica_of_San_Saturnino"
+        },
+        "http://www.w3.org/2003/01/geo/wgs84_pos#geometry": {
+            "@value": "POINT(9.1233329772949 39.213890075684)",
+            "@type": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        },
+        "http://dbpedia.org/ontology/thumbnail": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Saturnino-Cagliari2.JPG?width=300"
+        },
+        "http://www.w3.org/ns/prov#wasDerivedFrom": {
+            "@id": "http://en.wikipedia.org/wiki/Basilica_of_San_Saturnino?oldid=666651301"
+        },
+        "http://dbpedia.org/ontology/abstract": [
+            "La basílica de San Saturnino es la iglesia más antigua de Cagliari, dedicada al patrono de la ciudad. Se encuentra en el barrio Villanova, en la plaza San Cósimo. La iglesia y el cementerio adyacentes, que se extiende también bajo la cercana iglesia de San Lucifer, es uno de los más importantes y antiguos complejos paleocristianos de Cerdeña.",
+            "Die im 5. Jahrhundert begonnene Basilika San Saturno entstand im römischen Carales, dem heutigen Cagliari. Der Baurest des einstigen Kreuzkuppelbaus gehört zu den ältesten Kirchenruinen im mediterranen Raum und war Vorbild für die (erhaltenen) byzantinischen Kirchen auf Sardinien. Der noch erhaltene Ostflügel des einstigen Zentralbaus steht auf der Piazza San Cosima in Cagliaris Stadtteil Villanova. Die Fertigstellung der Kirche erfolgte erst Ende des 10. Jahrhunderts, da der Bau um 455 n. Chr. durch die Eroberung der Vandalen unterbrochen wurde. Die Spanier zerstörten im 17. Jahrhundert die zerfallende Bausubstanz, indem sie den größten Teil der Steine für den Neubau der Kathedrale abtrugen. Ein alliierter Bombentreffer besorgte 1943 den Rest.",
+            "聖薩圖里諾教堂（意大利语：Basilica di San Saturnino）是位於義大利撒丁島南部的一座教堂。教堂首次被提到是在6世紀初，1089年時，教堂進行了重建。1324年時，教堂被毀。1714年，教堂得到了重建。1943年時，教堂被盟軍轟炸，戰後得到修復。1978年至1996年期間，教堂一度關閉進行修復。2004年，教堂重新對外開放。",
+            "La Basilique San Saturnino est un basilique religieuse située à Cagliari la capitale de la province italienne de la Sardaigne.",
+            "The Basilica of San Saturnino is a Palaeo-Christian church in Cagliari, southern Sardinia, Italy."
+        ],
+        "http://www.georss.org/georss/point": "39.213889 9.123333",
+        "http://purl.org/voc/vrank#hasRank": {
+            "@id": "_:vb25949963"
+        },
+        "http://purl.org/linguistics/gold/hypernym": {
+            "@id": "http://dbpedia.org/resource/Church"
+        }
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "@id": "http://dbpedia.org/resource/Teatro_Lirico_(Cagliari)",
+        "@type": [
+            "http://dbpedia.org/class/yago/Object100002684",
+            "http://dbpedia.org/class/yago/WikicatOperaHouses",
+            "http://dbpedia.org/class/yago/Theater104417809",
+            "http://dbpedia.org/class/yago/Opera103849814",
+            "http://dbpedia.org/class/yago/PhysicalEntity100001930",
+            "http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity",
+            "http://dbpedia.org/class/yago/YagoGeoEntity",
+            "http://dbpedia.org/class/yago/WikicatBuildingsAndStructuresInCagliari",
+            "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+            "http://dbpedia.org/class/yago/Whole100003553",
+            "http://dbpedia.org/class/yago/WikicatTheatresCompletedIn1993",
+            "http://dbpedia.org/ontology/Building",
+            "http://dbpedia.org/class/yago/WikicatOperaHousesInItaly",
+            "http://dbpedia.org/class/yago/Artifact100021939",
+            "http://dbpedia.org/class/yago/Building102913152",
+            "http://dbpedia.org/class/yago/Structure104341686"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Teatro Lirico di Cagliari",
+                "@language": "it"
+            },
+            {
+                "@value": "Teatro lirico di Cagliari",
+                "@language": "fr"
+            },
+            {
+                "@value": "Teatro Lirico (Cagliari)",
+                "@language": "en"
+            },
+            {
+                "@value": "Teatro Lirico di Cagliari",
+                "@language": "nl"
+            },
+            {
+                "@value": "Teatro Lirico di Cagliari",
+                "@language": "de"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "Le Teatro lirico di Cagliari est une salle d'opéra, inaugurée en 1993 à Cagliari.",
+                "@language": "fr"
+            },
+            {
+                "@value": "Das Teatro Lirico di Cagliari ist ein 1993 eröffnetes Opernhaus in Cagliari (Sardinien).",
+                "@language": "de"
+            },
+            {
+                "@value": "Het Teatro Lirico di Cagliari is een operagebouw in Cagliari. Het is het vornaamste theater van de stad. Het gebouw is neergezet als vervanging van het Teatro Civico, dat bij het bombardement op Cagliari zwaar beschadigd werd gedurende de Tweede Wereldoorlog. Na de oorlog was dat oude theater niet meer bruikbaar. Het Teatro Lirico di Cagliari won enige grote nationale prijzen, waaronder de Premio Franco Abbiati in 2001 voor haar innovatieve programmering. Belangrijke projecten waren: Lucia di Lammermoor (2000) en Carmen (2005).",
+                "@language": "nl"
+            },
+            {
+                "@value": "The Teatro Lirico di Cagliari is an opera house in Cagliari. It is the main theatre of the city. The Teatro Lirico was built in order to provide a large theatre to the city. After the destruction of the Teatro Civico, damaged by the shelling of Cagliari operated by the Allies during World War II, and the destruction of the Politeama Regina Margherita due to a fire in 1942, after the war there was not a suitable theatre in Cagliari.",
+                "@language": "en"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#sameAs": [
+            {
+                "@id": "http://www.wikidata.org/entity/Q1453465"
+            },
+            {
+                "@id": "http://fr.dbpedia.org/resource/Teatro_lirico_di_Cagliari"
+            },
+            {
+                "@id": "http://it.dbpedia.org/resource/Teatro_Lirico_di_Cagliari"
+            },
+            {
+                "@id": "http://yago-knowledge.org/resource/Teatro_Lirico_(Cagliari)"
+            },
+            {
+                "@id": "http://rdf.freebase.com/ns/m.0cm96wp"
+            },
+            {
+                "@id": "http://nl.dbpedia.org/resource/Teatro_Lirico_di_Cagliari"
+            },
+            {
+                "@id": "http://de.dbpedia.org/resource/Teatro_Lirico_di_Cagliari"
+            },
+            {
+                "@id": "http://wikidata.dbpedia.org/resource/Q1453465"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": [
+            {
+                "@id": "http://dbpedia.org/resource/Category:Opera_houses_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Music_venues_completed_in_1993"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Theatres_completed_in_1993"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Visitor_attractions_in_Sardinia"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageID": 28128047,
+        "http://dbpedia.org/ontology/wikiPageRevisionID": 660478712,
+        "http://dbpedia.org/ontology/wikiPageWikiLink": [
+            {
+                "@id": "http://dbpedia.org/resource/Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/File:Lirico_Cagliari.jpg"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Opera_houses_in_Italy"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Lucia_di_Lammermoor"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Buildings_and_structures_in_Cagliari"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Bar_(establishment)"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/World_War_II"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Music_venues_completed_in_1993"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Carlos_Kleiber"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Carmen"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Opera_house"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Theatres_completed_in_1993"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Category:Visitor_attractions_in_Sardinia"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Allies_of_World_War_II"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageExternalLink": {
+            "@id": "http://www.teatroliricodicagliari.it/home.htm"
+        },
+        "http://xmlns.com/foaf/0.1/homepage": {
+            "@id": "http://www.teatroliricodicagliari.it/home.htm"
+        },
+        "http://www.w3.org/2003/01/geo/wgs84_pos#lat": 39.22583389282227,
+        "http://www.w3.org/2003/01/geo/wgs84_pos#long": 9.123287200927734,
+        "http://xmlns.com/foaf/0.1/depiction": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Lirico_Cagliari.jpg"
+        },
+        "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+            "@id": "http://en.wikipedia.org/wiki/Teatro_Lirico_(Cagliari)"
+        },
+        "http://www.w3.org/2003/01/geo/wgs84_pos#geometry": {
+            "@value": "POINT(9.1232872009277 39.225833892822)",
+            "@type": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        },
+        "http://dbpedia.org/ontology/thumbnail": {
+            "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Lirico_Cagliari.jpg?width=300"
+        },
+        "http://www.w3.org/ns/prov#wasDerivedFrom": {
+            "@id": "http://en.wikipedia.org/wiki/Teatro_Lirico_(Cagliari)?oldid=660478712"
+        },
+        "http://dbpedia.org/ontology/abstract": [
+            "The Teatro Lirico di Cagliari is an opera house in Cagliari. It is the main theatre of the city. The Teatro Lirico was built in order to provide a large theatre to the city. After the destruction of the Teatro Civico, damaged by the shelling of Cagliari operated by the Allies during World War II, and the destruction of the Politeama Regina Margherita due to a fire in 1942, after the war there was not a suitable theatre in Cagliari. The project, by the Italian architects Luciano Galmozzi, Pierfrancesco Ginoulhiac e Teresa Ginoulhiac Arslan, won a bid for the contract in 1967. The opera house was inaugurated in 1993. It covers a surface of 5000 m² among the stage (which is 22/23.40m wide; 12.5/25m long; and 23m high), the auditorium (with 1,628 seats divided into stalls, 800 seats, and two loggias, 431 and 397 seats) and the foyer. Various rooms, like laboratories, offices, bar, book shop and restaurant were added after the inauguration. The Teatro Lirico di Cagliari has received some important national prizes, in particular the Premio Franco Abbiati in 2001 for its innovatory programme. The prize was also assigned in 2000 and 2005 for Lucia di Lammermoor and Carmen respectively. Conductor Carlos Kleiber gave his last concert here in February 1999.",
+            "Le Teatro lirico di Cagliari est une salle d'opéra, inaugurée en 1993 à Cagliari.",
+            "Het Teatro Lirico di Cagliari is een operagebouw in Cagliari. Het is het vornaamste theater van de stad. Het gebouw is neergezet als vervanging van het Teatro Civico, dat bij het bombardement op Cagliari zwaar beschadigd werd gedurende de Tweede Wereldoorlog. Na de oorlog was dat oude theater niet meer bruikbaar. Het project voor het nieuwe theater, een ontwerp van de Italiaanse architecten Luciano Galmozzi, Pierfrancesco Ginoulhiac en Teresa Ginoulhiac Arslan, won de inschrijvingsbieding in 1967. Het operahuis werd in gebruik genomen in 1993. Het heeft een oppervlakte van 5000 m², waaronder het toneel, een zaal (met 1628 zitplaatsen, verdeeld over zaal en twee loges) en een foyer. Diverse ruimten werden later toegevoegd, waaronder werkkamers, werkplaatsen, kantoren, een bar, boekwinkel en restaurant. Het Teatro Lirico di Cagliari won enige grote nationale prijzen, waaronder de Premio Franco Abbiati in 2001 voor haar innovatieve programmering. Belangrijke projecten waren: Lucia di Lammermoor (2000) en Carmen (2005).",
+            "Das Teatro Lirico di Cagliari ist ein 1993 eröffnetes Opernhaus in Cagliari (Sardinien)."
+        ],
+        "http://www.georss.org/georss/point": "39.225835 9.123287",
+        "http://purl.org/voc/vrank#hasRank": {
+            "@id": "_:vb24724898"
+        },
+        "http://purl.org/linguistics/gold/hypernym": {
+            "@id": "http://dbpedia.org/resource/House"
+        }
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "@id": "http://dbpedia.org/resource/Pontifical_Faculty_of_Theology_of_Sardinia",
+        "@type": [
+            "http://dbpedia.org/class/yago/Organization108008335",
+            "http://dbpedia.org/class/yago/SocialGroup107950920",
+            "http://dbpedia.org/class/yago/Group100031264",
+            "http://dbpedia.org/class/yago/WikicatRomanCatholicUniversitiesAndColleges",
+            "http://dbpedia.org/class/yago/Abstraction100002137",
+            "http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity",
+            "http://dbpedia.org/class/yago/WikicatPontificalUniversities",
+            "http://dbpedia.org/class/yago/EducationalInstitution108276342",
+            "http://dbpedia.org/class/yago/University108286569",
+            "http://dbpedia.org/class/yago/YagoLegalActor",
+            "http://dbpedia.org/class/yago/YagoLegalActorGeo",
+            "http://dbpedia.org/ontology/University",
+            "http://dbpedia.org/class/yago/Institution108053576",
+            "http://dbpedia.org/class/yago/WikicatPontificalOrganizations"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Pontifical Faculty of Theology of Sardinia",
+                "@language": "en"
+            },
+            {
+                "@value": "Pontificia facoltà teologica della Sardegna",
+                "@language": "it"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#comment": [
+            {
+                "@value": "La Pontificia facoltà teologica della Sardegna è un'istituzione universitaria per la teologia, istituita a Cuglieri da papa Pio XI con la costituzione apostolica Nostrarum partem del 5 agosto 1927 ed è stata la prima facoltà teologica italiana extra urbem (fuori di Roma).",
+                "@language": "it"
+            },
+            {
+                "@value": "The Pontifical Faculty of Theology of Sardinia is a theological academic institution founded by pope Pius XI in Cuglieri (Sardinia – Italy) with the Apostolic Constitution Nostrarum Partem of 5 August 1927. It was the first Italian Faculty of Theology extra urbem (outside Rome).",
+                "@language": "en"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#sameAs": [
+            {
+                "@id": "http://yago-knowledge.org/resource/Pontifical_Faculty_of_Theology_of_Sardinia"
+            },
+            {
+                "@id": "http://www.wikidata.org/entity/Q3908281"
+            },
+            {
+                "@id": "http://it.dbpedia.org/resource/Pontificia_facoltà_teologica_della_Sardegna"
+            },
+            {
+                "@id": "http://rdf.freebase.com/ns/m.0h66y3p"
+            },
+            {
+                "@id": "http://wikidata.dbpedia.org/resource/Q3908281"
+            }
+        ],
+        "http://purl.org/dc/terms/subject": {
+            "@id": "http://dbpedia.org/resource/Category:Pontifical_organizations"
+        },
+        "http://dbpedia.org/ontology/wikiPageID": 33179196,
+        "http://dbpedia.org/ontology/wikiPageRevisionID": 685443319,
+        "http://dbpedia.org/ontology/wikiPageWikiLink": [
+            {
+                "@id": "http://dbpedia.org/resource/Category:Pontifical_organizations"
+            },
+            {
+                "@id": "http://dbpedia.org/resource/Cuglieri"
+            }
+        ],
+        "http://dbpedia.org/ontology/wikiPageExternalLink": {
+            "@id": "http://www.pfts.it/"
+        },
+        "http://xmlns.com/foaf/0.1/homepage": {
+            "@id": "http://www.pfts.it/"
+        },
+        "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+            "@id": "http://en.wikipedia.org/wiki/Pontifical_Faculty_of_Theology_of_Sardinia"
+        },
+        "http://www.w3.org/ns/prov#wasDerivedFrom": {
+            "@id": "http://en.wikipedia.org/wiki/Pontifical_Faculty_of_Theology_of_Sardinia?oldid=685443319"
+        },
+        "http://dbpedia.org/ontology/abstract": [
+            "La Pontificia facoltà teologica della Sardegna è un'istituzione universitaria per la teologia, istituita a Cuglieri da papa Pio XI con la costituzione apostolica Nostrarum partem del 5 agosto 1927 ed è stata la prima facoltà teologica italiana extra urbem (fuori di Roma).",
+            "The Pontifical Faculty of Theology of Sardinia is a theological academic institution founded by pope Pius XI in Cuglieri (Sardinia – Italy) with the Apostolic Constitution Nostrarum Partem of 5 August 1927. It was the first Italian Faculty of Theology extra urbem (outside Rome)."
+        ],
+        "http://purl.org/voc/vrank#hasRank": {
+            "@id": "_:vb22301987"
+        },
+        "http://purl.org/linguistics/gold/hypernym": {
+            "@id": "http://dbpedia.org/resource/Institution"
+        }
+    },
+    {},
+    {},
+    {},
+    {}
+]

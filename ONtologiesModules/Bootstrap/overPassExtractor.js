@@ -38,7 +38,7 @@ Return:
 //http://ustroetz.github.io/gimmeOSM/?relationID=40007
 exports.relationResolve=(relationItems)=>{
   return new Promise((resolve,reject) => {
-
+      console.log("RR");
       request('http://polygons.openstreetmap.fr/get_wkt.py?id='+relationItems.id+'&params=0', function (error, response, body) {
 
         if(error){
@@ -84,11 +84,11 @@ exports.nodeResolve=(nodeItems)=>{
                       for(let feature of overpassTurbo.features){
                           feature.properties.tags=feature.properties.tags;
                           if(feature.geometry.type == "POLYGON"){
-                            feature.properties.wkt=`${feature.geometry.type}((${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]}))`;
 
-                          }else {
                             feature.properties.wkt=`${feature.geometry.type}(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`;
+                          }else {
 
+                            feature.properties.wkt=`${feature.geometry.type}(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`;
                           }
 
                           nodes.push(feature.properties);
@@ -122,30 +122,40 @@ exports.wayResolve=(wayItems)=>{
           .then((overpassTurbo) => {
                   let nodes=[];
                   let wkt;
+                  let z=0
                   if(overpassTurbo){
                     for(let feature of overpassTurbo.features){
-                      if(feature.geometry.type == "Polygon"){
-                        wkt=`${feature.geometry.type}((`;
 
-                      }else {
-                         wkt=`${feature.geometry.type}(`;
-                      }
-                        //feature.properties.tags=feature.properties.tags;
-                        for(let geometry of feature.geometry.coordinates){
-                          for(let i=0;i<geometry.length;i++){
-                            wkt=wkt+geometry[i][0]+" "+geometry[i][1];
-                            if((i<geometry.length-1)){
+                        wkt=`${feature.geometry.type}(`;
+                          
+                        for(let j=0;j<feature.geometry.coordinates.length;j++){
+                          console.log("----");
+
+
+
+                          for(let i=0;i<feature.geometry.coordinates[j].length;i++){
+                            console.log(feature.geometry.coordinates[j][i],"--");
+
+                            if(feature.geometry.type == "Polygon"){
+                              wkt=wkt+" "+feature.geometry.coordinates[j][i][0] + " " +feature.geometry.coordinates[j][i][1];
+                              if(i+1<feature.geometry.coordinates[j].length){
                                 wkt=wkt+",";
+                              }
+                            }else{
+                              wkt=wkt+" "+feature.geometry.coordinates[j][i];
+                              if(i==feature.geometry.coordinates[j].length-1 && i+1<feature.geometry.coordinates[j].length){
+                                wkt=wkt+",";
+                              }
                             }
+
+                            
+
                           }
                         }
-                        if(feature.geometry.type == "Polygon"){
-                          feature.properties.wkt=`${wkt}))`;
+                        feature.properties.wkt=`${wkt})`;
 
-                        }else {
-                          feature.properties.wkt=`${wkt})`;
-                        }
-
+                        //feature.properties.tags=feature.properties.tags;
+                        //for(let geometry of feature.geometry.coordinates){
                         nodes.push(feature.properties);
                     }
                   }

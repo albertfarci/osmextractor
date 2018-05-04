@@ -25,10 +25,10 @@ if (process.argv[2]=="-u" && process.argv[3]=="-label" && process.argv[4]=="Wiki
         return Promise.all(insertPromise);
     })
     .then((results)=>{
-        console.log("Ciuppa",results);
+        console.log("Ciuppa");
     })
     .catch((error)=>{
-      console.log(error());
+      console.log(error);
     });
 } else if (process.argv[2]=="-u" && process.argv[3]=="-linksDbpedia" && process.argv[4]=="Wikidata") {
   console.log(process.argv[2],process.argv[3],process.argv[4]);
@@ -57,9 +57,9 @@ if (process.argv[2]=="-u" && process.argv[3]=="-label" && process.argv[4]=="Wiki
       return Promise.all(insertPromise);
   })
   .then((results)=>{
-      console.log("Ciuppa",results);
+      console.log("Ciuppa");
   })
   .catch((error)=>{
-    console.log(error());
+    console.log(error);
   });
 }

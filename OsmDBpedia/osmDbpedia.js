@@ -1,71 +1,122 @@
 var fs = require("fs");
-
-
-var overpass = fs.readFileSync("../Overpass/overpass.json");
-var jsonOverpass = JSON.parse(overpass);
-
-var dbpedia = fs.readFileSync("../DBpedia/dbpedia.json");
-var jsonDbpedia = JSON.parse(dbpedia);
+const individualCreator = require('./individualGenerator');
+const {Client, Node, Text, Data, Triple} = require('virtuoso-sparql-client'); 
 
 merge();
-/**
+
 function merge(){
 
-	let osmDbpedia=[];
+	if (process.argv[2]!="-i") {
 
-	for (var itemOverpass of jsonOverpass){
 
-		for (var itemDBpedia of jsonDbpedia["@graph"]){
+		if(process.argv[2]=="-ic"){
 
-			if(itemOverpass.tags.wikidata == itemDBpedia["http://www.w3.org/2002/07/owl#sameAs"]["@id"].split("http://www.wikidata.org/entity/")[1]){
+			individualCreator.createBootIndividual(process.argv[3]);
 
-				itemOverpass.dbpedia=itemDBpedia["@id"];
+		}else{
 
+			var overpass = fs.readFileSync(`../ONtologiesModules/Bootstrap/Json/${process.argv[2]}.json`);
+		    var jsonOverpass = JSON.parse(overpass);
+
+			var dbpedia = fs.readFileSync(`../DBpedia/${process.argv[2]}.json`);
+			var jsonDbpedia = JSON.parse(dbpedia);
+
+			let osmDbpedia=[];
+			var i=0;
+
+			for (var itemOverpass of jsonOverpass){
+
+				if(itemOverpass.tags.wikidata){
+					
+					for (var itemDbpedia of jsonDbpedia){
+
+						if(itemDbpedia["http://www.w3.org/2002/07/owl#sameAs"]){
+					  		
+					  		for(var sameAs of itemDbpedia["http://www.w3.org/2002/07/owl#sameAs"]){
+								if(sameAs['@id'].split("http://www.wikidata.org/entity/")[1] == itemOverpass.tags.wikidata){
+									itemOverpass.dbpedia={};
+									itemOverpass.dbpedia.type=[];
+									if(itemDbpedia['@type']){
+										itemOverpass.dbpedia.type=itemDbpedia['@type'];
+									}
+									if(itemDbpedia['http://www.w3.org/2000/01/rdf-schema#label']){
+										itemOverpass.dbpedia.label=itemDbpedia['http://www.w3.org/2000/01/rdf-schema#label'];
+									}
+									if(itemDbpedia['http://purl.org/dc/terms/subject']){
+										itemOverpass.dbpedia.subject=itemDbpedia['http://purl.org/dc/terms/subject'];
+									}
+									if(itemDbpedia['http://dbpedia.org/ontology/abstract']){
+										itemOverpass.dbpedia.abstract=itemDbpedia['http://dbpedia.org/ontology/abstract'];
+									}
+									console.log(itemOverpass.dbpedia);
+								}
+					  		}	
+						}
+		     		}
+				}
 				osmDbpedia.push(itemOverpass);
 			}
 
+			
+
+			fs.writeFile(`./${process.argv[2]}.json`, JSON.stringify(osmDbpedia), function (err) {
+		    if (err)
+		      return console.log(err);
+
+		  	});	
+		
 		}
 
-	}
+	    
+	}else{
 
-	writeRdf(JSON.stringify(osmDbpedia));
+		var overpass = fs.readFileSync(`./Json/${process.argv[3]}.json`);
+	    var jsonOverpass = JSON.parse(overpass);
 
-}
-**/
+		const SaveClient = new Client('http://localhost:8890/sparql');
 
-function merge(){
+        SaveClient.setOptions( 
+          "application/json",
+          {"tutr": "https://w3id.org/osmtoti/"},
+          "https://w3id.org/osmtoti/"
+        );
 
-	let osmDbpedia=[];
 
-	for (var itemOverpass of jsonOverpass){
+        for(let item of jsonOverpass){
+            
+        	SaveClient.getLocalStore().add(
+                  new Triple(
+                    `tutr:${item.id}`,
+                    "rdf:type",
+                    "tutr:Destination"),
+                    Triple.ADD
+                  
+                );
 
-		for (var itemDBpedia of jsonDbpedia){
+            if(item.tags.name){
+                SaveClient.getLocalStore().add(
+                  new Triple(
+                    `tutr:${item.id}`,
+                    "rdfs:label",
+                    new Text(`${item.tags.name}`, "en"),
+                    Triple.ADD
+                  )
+                );
+                
+            }
+             
 
-			if(itemDBpedia["http://www.w3.org/2002/07/owl#sameAs"]){
-				if(itemOverpass.tags.wikidata == itemDBpedia["http://www.w3.org/2002/07/owl#sameAs"]["@id"].split("http://www.wikidata.org/entity/")[1]){
+        }
 
-					//itemOverpass.dbpedia=itemDBpedia["dbpediaId"]["value"];
-					itemOverpass.dbpedia=itemDBpedia["@id"];
-					console.log(itemDBpedia["dbpediaId"]);
+        SaveClient.store(true)
+        .then((result)=>{
+          console.log("--",result);
+        })
+        .catch((err) => {
+          err;
+        });
 
-				}
+	} 
 
-			}
-
-		}
-
-		osmDbpedia.push(itemOverpass);
-
-	}
-
-	writeRdf(JSON.stringify(osmDbpedia));
-
-}
-
-function writeRdf(geojson){
-  fs.writeFile('./osmDbpedia.json', geojson, function (err) {
-    if (err)
-      return console.log(err);
-
-  });
+	
 }

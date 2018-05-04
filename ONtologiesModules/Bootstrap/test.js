@@ -4,19 +4,7 @@ const individualCreator = require('./individualGenerator');
 const individualInsert = require('./individualInsert');
 const tagsConstants = require('./tagsCostants');
 var fs = require("fs");
-/**
-if(process.argv[2] && process.argv[2]==='museum'){
 
-
-
-}
-
-if(process.argv[2] && process.argv[2]==='boundary'){
-
-
-
-}
-**/
 
 if (process.argv[2]) {
 
@@ -24,10 +12,15 @@ if (process.argv[2]) {
     if (process.argv[2].includes("=")) {
 
         for (let key of tagsConstants) {
+            
             if (process.argv[2].split("=")[0] === key.key) {
+               
                 for (let value of key.values) {
+                    
                     if (process.argv[2].split("=")[1] === value["@id"]) {
+
                         console.log("includes = && vlues exist");
+
                         overpassQuery.generalQuery(process.argv[2])
                             .then((overpassTurbo) => {
 
@@ -35,19 +28,17 @@ if (process.argv[2]) {
                                 let identifiersNodesForQuery='';
                                 let identifiersWaysForQuery='';
                                 let geoJsonMap = overpassExtractor.mapFeatureExtractor(overpassTurbo);
+
                                 for(let i=0;i<geoJsonMap.length;i++){
 
                                     if(geoJsonMap[i].type=="relation"){
                                           promises.push(overpassExtractor.relationResolve(geoJsonMap[i]));
-
                                     }else if(geoJsonMap[i].type=="node"){
                                           identifiersNodesForQuery=identifiersNodesForQuery+"node("+geoJsonMap[i].id+");";
                                     }else if(geoJsonMap[i].type=="way"){
                                           identifiersWaysForQuery=identifiersWaysForQuery+"way("+geoJsonMap[i].id+");";
-
                                     }
                                     if(i==geoJsonMap.length-1){
-                                        console.log(identifiersWaysForQuery);
                                         promises.push(overpassExtractor.nodeResolve(identifiersNodesForQuery));
                                         promises.push(overpassExtractor.wayResolve(identifiersWaysForQuery));
                                     }
@@ -66,10 +57,8 @@ if (process.argv[2]) {
                                         }
                                     }else{
 
-                                      arrayTmp[i]=results[i];
+                                        arrayTmp[i]=results[i];
                                     }
-
-
                                 }
 
                                 return arrayTmp;
@@ -79,11 +68,7 @@ if (process.argv[2]) {
                                 fs.writeFile(`../${process.argv[2]}.json`, JSON.stringify(results), function(err) {
                                     if (err)
                                         return console.log(err);
-                                    if (process.argv[3]) {
 
-                                        individualCreator.createIndividual(process.argv[3]);
-
-                                    }
                                 });
 
 
@@ -113,7 +98,7 @@ if (process.argv[2]) {
             })
             .then((results) => {
 
-                fs.writeFile(`../${process.argv[2]}.json`, JSON.stringify(results), function(err) {
+                fs.writeFile(`./${process.argv[2]}.json`, JSON.stringify(results), function(err) {
                     if (err)
                         return console.log(err);
                   /**  if (process.argv[3]) {
@@ -136,6 +121,7 @@ if (process.argv[2]) {
                 console.log(key.values);
                 overpassQuery.generalQuery(process.argv[2])
                     .then((overpassTurbo) => {
+                        
                             let promises = [];
                             let identifiersNodesForQuery='';
                             let identifiersWaysForQuery='';
@@ -175,11 +161,10 @@ if (process.argv[2]) {
 
 
                         }
-                        console.log(arrayTmp);
                         return arrayTmp;
                     }).then((results) => {
 
-                        fs.writeFile(`../${process.argv[2]}.json`, JSON.stringify(results), function(err) {
+                        fs.writeFile(`./Json/${process.argv[2]}.json`, JSON.stringify(results), function(err) {
                             if (err)
                                 return console.log(err);
                             if (process.argv[3]) {
@@ -198,7 +183,7 @@ if (process.argv[2]) {
         /**
         Bootstrap per inserire nell'Onotlogia toti/geo gli individui presi dai json scaricati precedentemente da Overpass-turbo
         **/
-        individualInsert.sparqlUpdate("http://db.intuit.crs4.it:8890/sparql", "https://w3id.org/toti/",  process.argv[3]);
-
+        //individualInsert.sparqlUpdate("http://localhost:8890/sparql", "https://w3id.org/toti/geo/",  process.argv[3]);
+        individualCreator.createBootIndividual(process.argv[3]);
     }
 }

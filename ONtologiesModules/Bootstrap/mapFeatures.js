@@ -10,5 +10,7 @@ module.exports= [
       "values" : [ { "@id": "place=neighbourhood"} ,
         { "@id": "place=suburb"} ,
         { "@id": "place=quarter"} ,
-        { "@id": "place=city_block"} ] }
+        { "@id": "place=city_block"} ] },
+    { "key": "Desert",
+          "values" : [ { "@id": "highway=primary"} ] }
 ]

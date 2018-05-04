@@ -42,7 +42,6 @@ exports.sparqlWikidataDBpediaLink=(individualToti,i)=>{
 
                 for(let dbpediaEntity of body.results.bindings){
                     individualToti.sameAs.link.push(dbpediaEntity.dbpediaEntity.value);
-                    console.log("Guaglione",individualToti.sameAs.link);
                 }
                 return resolve(individualToti);
 
@@ -86,7 +85,6 @@ exports.sparqlWikidataLabel=(individualToti,i)=>{
                 individualToti.wikidataEntity.labels=[];
                 body=JSON.parse(body);
                 for(let label of body.results.bindings){
-                    console.log(label);
                     individualToti.wikidataEntity.labels.push(label.label);
                 }
                 return resolve(individualToti);
@@ -124,7 +122,6 @@ exports.sparqlWikidataLabel=(individualToti,i)=>{
                   individualToti.sameAs={};
                   individualToti.sameAs.link=[];
                   for(let link of results.results.bindings){
-                      console.log(link);
                       individualToti.sameAs.link.push(link.sameAs.value);
                   }
                   return resolve(individualToti);
@@ -207,17 +204,16 @@ exports.insertTotiWikidataLabel=(individual,i)=>{
                         <${individual.totiEntity.value}> owl:sameAs <${individual.wikidataEntity.value}>
                    }
                 } `;
-          console.log(query);
 
 
 
             Client.query(`${query}`)
             .then((insertResult)=>{
 
-                console.log(insertResult);
-
             })
             .catch(error =>{
+
+                console.log(query);
                 console.log(error);
             });
           }, 1500*i);
@@ -233,7 +229,6 @@ Stampa a video un feedback sul risultato dell'operazione di inserimento.
 **/
 exports.insertWikidataDBpediaSameAs=(individual,i)=>{
       return new Promise((resolve, reject) => {
-        console.log(individual);
         const Client = new Sparql.Client(`http://db.intuit.crs4.it:8890/sparql`);
         Client.setOptions("application/json");
           setTimeout(function() {
@@ -249,17 +244,16 @@ exports.insertWikidataDBpediaSameAs=(individual,i)=>{
 
           query=query+`}
               }`;
-          console.log(query);
+
 
 
 
             Client.query(`${query}`)
             .then((insertResult)=>{
 
-                console.log(insertResult);
-
             })
             .catch(error =>{
+              console.log(query);
                 console.log(error);
             });
           }, 1500*i);

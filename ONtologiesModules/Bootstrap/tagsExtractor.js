@@ -1,6 +1,6 @@
 var fs = require("fs");
 
-var osmDbpediaWikidata = fs.readFileSync(`./boundary.json`);
+var osmDbpediaWikidata = fs.readFileSync(`./tourism.json`);
 var jsonOsmDbpediaWikidata = JSON.parse(osmDbpediaWikidata);
 
 let properties=[];

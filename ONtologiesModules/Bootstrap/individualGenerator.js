@@ -7,7 +7,7 @@ const COMUNE = 8;
 const PROVINCIA = 6;
 const REGIONE = 4;
 
-exports.createIndividual = (file)=> {
+exports.createIndividualBoundary = (file)=> {
       let promises=[];
       var osmDbpediaWikidata = fs.readFileSync(`./${file}.json`);
       var jsonOsmDbpediaWikidata = JSON.parse(osmDbpediaWikidata);
@@ -97,12 +97,56 @@ exports.createIndividual = (file)=> {
           });
 };
 
+exports.createBootIndividual = (file) => {
+      let promises=[];
+      var osmDbpediaWikidata = fs.readFileSync(`./Json/${file}.json`);
+      var jsonOsmDbpediaWikidata = JSON.parse(osmDbpediaWikidata);
+
+      for (var item of jsonOsmDbpediaWikidata){
+              promises.push(exports.jsonToIndividuals(item));
+          }
+
+          Promise.all(promises)
+          .then(results=>{
+              let i=0;
+              let individuals="";
+              for(let item of results){
+
+                  let identifier=encode().value( item.type + "/" +  item.id);
+                  individuals=individuals+`\n<owl:NamedIndividual rdf:about="https://w3id.org/osmtoti/${item.id}">`;
+
+                    individuals=individuals+`
+                          <geosparql:hasGeometry rdf:resource="https://w3id.org/osmtoti/T-${item.id}"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/osmtoti/T-${item.id}">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">${item.wkt}</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                        `;
+                      i++;
+
+                      if(i==results.length){
+
+                          writeRdf(individuals,file);
+                      }
+              }
+
+          })
+          .catch((err)=>{
+            console.log("Errore");
+            console.log(err);
+          });
+
+}
+
+
 exports.jsonToIndividuals=(item)=>{
   return new Promise((resolve, reject) => {
       let title="", admLevel;
       item.urlName=shortid.generate();
       //let identifier=encode().value( item.type + "/" +  item.id);
       item.geometry=shortid.generate();
+      console.log(item.properties);
       if(item.tags["name"]){
         item.title=item.tags["name"];
       }else if(item.tags["name:it"]){
@@ -133,7 +177,7 @@ exports.jsonToIndividuals=(item)=>{
 };
 
 function writeRdf(geojson,file){
-  fs.writeFile(`./${file}.rdf`, geojson, function (err) {
+  fs.writeFile(`./Vir/${file}.rdf`, geojson, function (err) {
     if (err)
       return console.log(err);
 
