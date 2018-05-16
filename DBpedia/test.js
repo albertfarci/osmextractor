@@ -16,7 +16,7 @@ if(process.argv[2]){
       for(i;i<jsonOsmDbpedia.length;i++){
           if(jsonOsmDbpedia[i].tags.wikidata){
 
-            console.log(jsonOsmDbpedia[i]);
+            console.log("CIuccia",jsonOsmDbpedia[i]);
             promises.push(dbpediaQuery.individuals(jsonOsmDbpedia[i],i));
 
           } 

@@ -82,38 +82,6 @@ if (process.argv[2]) {
                 }
             }
         }
-    } else if (process.argv[2] == "boundary") {
-        overpassQuery.boundary()
-            .then((overpassTurbo) => {
-
-                let geoJson = overpassExtractor.mapFeatureExtractor(overpassTurbo);
-
-                let promises = [];
-                for (var item of geoJson) {
-
-                    promises.push(overpassExtractor.relationResolve(item));
-                }
-
-                return Promise.all(promises);
-            })
-            .then((results) => {
-
-                fs.writeFile(`./${process.argv[2]}.json`, JSON.stringify(results), function(err) {
-                    if (err)
-                        return console.log(err);
-                  /**  if (process.argv[3]) {
-
-                        individualCreator.createIndividual(process.argv[3]);
-
-                    }**/
-                });
-
-            })
-            .catch((err) => {
-
-                console.log("Errore");
-                console.log(err);
-            });
     } else if (process.argv[2] && process.argv[2]!="-i") {
         console.log("all");
         for (let key of tagsConstants) {

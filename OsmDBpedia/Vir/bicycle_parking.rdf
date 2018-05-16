@@ -1,0 +1,19 @@
+
+<owl:NamedIndividual rdf:about="https://w3id.org/osmtoti/2725254542">
+                          <rdf:type rdf:resource="https://w3id.org/osmtoti/Destination"/>
+                          <geosparql:hasGeometry rdf:resource="https://w3id.org/osmtoti/G-2725254542"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/osmtoti/G-2725254542">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Point(9.1086516 39.215371)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                        
+<owl:NamedIndividual rdf:about="https://w3id.org/osmtoti/3375228349">
+                          <rdf:type rdf:resource="https://w3id.org/osmtoti/Destination"/>
+                          <geosparql:hasGeometry rdf:resource="https://w3id.org/osmtoti/G-3375228349"/>
+                          </owl:NamedIndividual>
+                          <owl:NamedIndividual rdf:about="https://w3id.org/osmtoti/G-3375228349">
+                            <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+                            <geosparql:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">Point(9.1137394 39.2180284)</geosparql:asWKT>
+                          </owl:NamedIndividual>
+                        

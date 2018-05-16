@@ -35,15 +35,6 @@ exports.setRelated= (arrayItems) => {
                   )
                 );
                 
-                SaveClient.getLocalStore().add(
-                  new Triple(
-                    `tutr:${item.id}`,
-                    "tutr:hasPoint",            
-                    new Data(`Point(${item.coordinates[0][0]} ${item.coordinates[0][1]})`, "ogcgs:wktLiteral"),
-                    Triple.ADD
-                  )
-                );
-                
 
         }
 

@@ -18,7 +18,7 @@ function merge(){
 			var overpass = fs.readFileSync(`../ONtologiesModules/Bootstrap/Json/${process.argv[2]}.json`);
 		    var jsonOverpass = JSON.parse(overpass);
 
-			var dbpedia = fs.readFileSync(`../DBpedia/${process.argv[2]}.json`);
+			var dbpedia = fs.readFileSync(`../DBpedia/Json/${process.argv[2]}.json`);
 			var jsonDbpedia = JSON.parse(dbpedia);
 
 			let osmDbpedia=[];
@@ -59,7 +59,7 @@ function merge(){
 
 			
 
-			fs.writeFile(`./${process.argv[2]}.json`, JSON.stringify(osmDbpedia), function (err) {
+			fs.writeFile(`./Json/${process.argv[2]}.json`, JSON.stringify(osmDbpedia), function (err) {
 		    if (err)
 		      return console.log(err);
 
@@ -77,8 +77,8 @@ function merge(){
 
         SaveClient.setOptions( 
           "application/json",
-          {"tutr": "https://w3id.org/osmtoti/"},
-          "https://w3id.org/osmtoti/"
+          {"ogcgs": "http://www.opengis.net/ont/geosparql#"},
+          "http://www.opengis.net/ont/geosparql"
         );
 
 
@@ -86,23 +86,67 @@ function merge(){
             
         	SaveClient.getLocalStore().add(
                   new Triple(
-                    `tutr:${item.id}`,
+                    `ogcgs:${item.id}`,
                     "rdf:type",
-                    "tutr:Destination"),
+                    "ogcgs:Feature"),
                     Triple.ADD
                   
                 );
 
+        	
+
             if(item.tags.name){
-                SaveClient.getLocalStore().add(
+
+            	if(item.tags.name.includes('\"') ){
+
+            		console.log("Gav",JSON.stringify(item.tags.name));
+
+            		let str=JSON.stringify(item.tags.name);
+
+            		SaveClient.getLocalStore().add(
+	                  	new Triple(
+	                    `ogcgs:${item.id}`,
+	                    "rdfs:label",
+	                    `${str}@en`,
+	                    Triple.ADD
+	                  	)
+                	);
+            	}else{
+					SaveClient.getLocalStore().add(
+	                  	new Triple(
+	                    `ogcgs:${item.id}`,
+	                    "rdfs:label",
+	                    new Text(item.tags.name, "en"),
+	                    Triple.ADD
+	                  	)
+                	);
+            	}
+
+                
+                
+            }
+
+            if(item.wkt){
+            	
+
+            	SaveClient.getLocalStore().add(
                   new Triple(
-                    `tutr:${item.id}`,
-                    "rdfs:label",
-                    new Text(`${item.tags.name}`, "en"),
+                    `ogcgs:Tg-${item.id}`,
+                    "ogcgs:asWKT",            
+                    new Data(item.wkt, "ogcgs:wktLiteral"),
                     Triple.ADD
                   )
                 );
-                
+
+                SaveClient.getLocalStore().add(
+                  new Triple(
+                    `ogcgs:${item.id}`,
+                    "ogcgs:hasGeometry",
+                    `ogcgs:Tg-${item.id}`),
+                    Triple.ADD
+                  
+                );
+
             }
              
 
@@ -115,8 +159,9 @@ function merge(){
         .catch((err) => {
           err;
         });
+            }
 
-	} 
+	
 
 	
 }

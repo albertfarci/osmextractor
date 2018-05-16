@@ -126,33 +126,41 @@ exports.wayResolve=(wayItems)=>{
                   if(overpassTurbo){
                     for(let feature of overpassTurbo.features){
 
-                        wkt=`${feature.geometry.type}(`;
+                        if(feature.geometry.type == "Polygon"){
+                          wkt=`${feature.geometry.type}((`;
+                        }else{
+                          wkt=`${feature.geometry.type}(`;
+                        }
                           
                         for(let j=0;j<feature.geometry.coordinates.length;j++){
                           console.log("----");
 
-
-
                           for(let i=0;i<feature.geometry.coordinates[j].length;i++){
-                            console.log(feature.geometry.coordinates[j][i],"--");
 
                             if(feature.geometry.type == "Polygon"){
                               wkt=wkt+" "+feature.geometry.coordinates[j][i][0] + " " +feature.geometry.coordinates[j][i][1];
                               if(i+1<feature.geometry.coordinates[j].length){
+
                                 wkt=wkt+",";
                               }
                             }else{
                               wkt=wkt+" "+feature.geometry.coordinates[j][i];
-                              if(i==feature.geometry.coordinates[j].length-1 && i+1<feature.geometry.coordinates[j].length){
+                              if(i==feature.geometry.coordinates[j].length-1 && j < feature.geometry.coordinates.length-1 ){
+                                console.log(j);
                                 wkt=wkt+",";
                               }
                             }
 
-                            
-
                           }
+
                         }
-                        feature.properties.wkt=`${wkt})`;
+
+                        if(feature.geometry.type == "Polygon"){
+                          
+                          feature.properties.wkt=`${wkt}))`;
+                        }else{
+                          feature.properties.wkt=`${wkt})`;
+                        }
 
                         //feature.properties.tags=feature.properties.tags;
                         //for(let geometry of feature.geometry.coordinates){
